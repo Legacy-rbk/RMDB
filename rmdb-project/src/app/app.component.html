@@ -1,3 +1,16 @@
-<h6><app-First-Nav></app-First-Nav></h6>
-<h1><app-Slider-Show></app-Slider-Show></h1>
+
+<app-First-Nav></app-First-Nav>
+
+
+<app-Slider-Show></app-Slider-Show>
+
+<ol>
+  <li>
+    <button mat-raised-button (click)="openDialog()">Pick one</button>
+  </li>
+  <li *ngIf="animal">
+    You chose: <i>{{animal}}</i>
+  </li>
+</ol>
+
 <router-outlet></router-outlet>
