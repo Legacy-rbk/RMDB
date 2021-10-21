@@ -21,7 +21,8 @@ export class AppComponent {
   constructor(public dialog: MatDialog) {}
   openDialog(): void {
     const dialogRef = this.dialog.open(AuthPopupComponent, {
-      width: '250px',
+      width: '420px',
+      height:'500px',
       data: {name: this.name, animal: this.animal}
     });
 
