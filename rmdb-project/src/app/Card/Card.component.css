@@ -5,7 +5,10 @@
  .pic{
     display: flex;
 	flex-wrap: wrap;
+    overflow-x : auto
  }
+
+ .pic::
 
  .row {
     display: flex;
