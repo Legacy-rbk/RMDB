@@ -12,7 +12,7 @@ export interface DialogData {
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.scss']
 })
 
 
@@ -26,7 +26,8 @@ export class AppComponent {
   constructor(public dialog: MatDialog) {}
   openDialog(): void {
     const dialogRef = this.dialog.open(AuthPopupComponent, {
-      width: '250px',
+      width: '420px',
+      height:'500px',
       data: {name: this.name, animal: this.animal}
     });
 
