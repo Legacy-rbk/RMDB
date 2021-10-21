@@ -14,14 +14,16 @@ import {MatDialogModule ,MAT_DIALOG_DEFAULT_OPTIONS} from '@angular/material/dia
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {NgbPaginationModule, NgbAlertModule} from '@ng-bootstrap/ng-bootstrap';
+import { HoverCardComponent } from './hover-card/hover-card.component';
 
 
 @NgModule({
-  declarations: [			
+  declarations: [				
     AppComponent,
       FirstNavComponent,
       SliderShowComponent,
-      AuthPopupComponent
+      AuthPopupComponent,
+      HoverCardComponent
    ],
   imports: [
     BrowserModule,
