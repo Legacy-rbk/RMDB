@@ -16,12 +16,14 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {NgbPaginationModule, NgbAlertModule} from '@ng-bootstrap/ng-bootstrap';
 
 // import { NgbdCarouselConfig } from './carousel-config';
+import { CardComponent } from './Card/Card.component';
 @NgModule({
-  declarations: [			
+  declarations: [				
     AppComponent,
       FirstNavComponent,
       SliderShowComponent,
-      AuthPopupComponent
+      AuthPopupComponent,
+      CardComponent
    ],
   imports: [
     BrowserModule,
