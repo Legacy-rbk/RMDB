@@ -1,4 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
-body {
-  background-image: url("https://swall.teahub.io/photos/small/197-1977979_movies-digital-art-collage-movie-posters-fan-art.jpg");
-}
+/* 
+body{
+    background-color: black;
+} */
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

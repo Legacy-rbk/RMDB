@@ -1,5 +1,17 @@
 
-<router-outlet></router-outlet>
 <app-First-Nav></app-First-Nav>
 
+
 <app-Slider-Show></app-Slider-Show>
+
+<ol>
+  <li>
+    <button mat-raised-button (click)="openDialog()">Pick one</button>
+  </li>
+  <li *ngIf="animal">
+    You chose: <i>{{animal}}</i>
+  </li>
+</ol>
+
+<router-outlet></router-outlet>
+
