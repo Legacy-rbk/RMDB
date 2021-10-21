@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener,ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-First-Nav',
@@ -12,5 +12,15 @@ export class FirstNavComponent implements OnInit {
 
   ngOnInit() {
   }
+  @ViewChild('stickHeader') header: ElementRef;
+  @HostListener('window:scroll', ['$event'])
+  handleScroll() {
+    const windowScroll = window.pageYOffset;
 
+    if (windowScroll >= this.header.nativeElement.offsetHeight) {
+      this.sticky = true;
+    } else {
+      this.sticky = false;
+    }
+  }
 }
