@@ -17,13 +17,16 @@ import {NgbPaginationModule, NgbAlertModule} from '@ng-bootstrap/ng-bootstrap';
 import { HoverCardComponent } from './hover-card/hover-card.component';
 
 
+// import { NgbdCarouselConfig } from './carousel-config';
+import { CardComponent } from './Card/Card.component';
 @NgModule({
   declarations: [				
     AppComponent,
       FirstNavComponent,
       SliderShowComponent,
       AuthPopupComponent,
-      HoverCardComponent
+      HoverCardComponent,
+      CardComponent
    ],
   imports: [
     BrowserModule,
