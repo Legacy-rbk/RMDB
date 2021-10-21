@@ -1,15 +1,11 @@
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+
   body {
-    background-color: #1d1d1d;
+    background-color: #050505;
   }
   
   
-  html, body { height: 100%; }
+  html, body { height: 1200px }
   body { margin: 0 }
   
   

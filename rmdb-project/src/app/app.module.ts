@@ -8,22 +8,32 @@ import { SliderShowComponent } from './Slider-Show/Slider-Show.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatIconModule} from '@angular/material/icon';
 import {MatBadgeModule} from '@angular/material/badge';
+import { AuthPopupComponent } from './auth-popup/auth-popup.component';
+import {MatDialogModule ,MAT_DIALOG_DEFAULT_OPTIONS} from '@angular/material/dialog';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import {NgbPaginationModule, NgbAlertModule} from '@ng-bootstrap/ng-bootstrap';
 
-
+// import { NgbdCarouselConfig } from './carousel-config';
 @NgModule({
-  declarations: [		
+  declarations: [			
     AppComponent,
       FirstNavComponent,
-      SliderShowComponent
+      SliderShowComponent,
+      AuthPopupComponent
    ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatIconModule,
-    MatBadgeModule
+    MatBadgeModule,
+    MatDialogModule,
+    NgbModule,
+    NgbPaginationModule,
+    NgbAlertModule
   ],
-  providers: [],
+  providers: [{provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: {hasBackdrop: false}}],
   bootstrap: [AppComponent]
+ 
 })
 export class AppModule { }
