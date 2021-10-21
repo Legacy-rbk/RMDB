@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewEncapsulation , Inject } from '@angular/core';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { DialogData } from '../app.component';
+import {User} from '../User'
 
 @Component({
   selector: 'app-auth-popup',
@@ -14,6 +15,13 @@ constructor(
   public dialogRef: MatDialogRef<AuthPopupComponent>,
   @Inject(MAT_DIALOG_DATA) public data: DialogData) {}
 
+
+  user: User = {
+    email: '',
+    username: '',
+    password:''
+  };
+  
 onNoClick(): void {
   this.dialogRef.close();
 }
