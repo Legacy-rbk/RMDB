@@ -1,6 +1,4 @@
-
 <app-First-Nav></app-First-Nav>
-
 
 <app-Slider-Show></app-Slider-Show>
 
@@ -9,8 +7,12 @@
     <button mat-raised-button (click)="openDialog()">Pick one</button>
   </li>
   <li *ngIf="animal">
-    You chose: <i>{{animal}}</i>
+    You chose: <i>{{ animal }}</i>
   </li>
 </ol>
+<app-hover-card></app-hover-card>
+
+<app-Card></app-Card>
 
 <router-outlet></router-outlet>
+

@@ -12,14 +12,19 @@ import { AuthPopupComponent } from './auth-popup/auth-popup.component';
 import {MatDialogModule ,MAT_DIALOG_DEFAULT_OPTIONS} from '@angular/material/dialog';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {NgbPaginationModule, NgbAlertModule} from '@ng-bootstrap/ng-bootstrap';
+import { HoverCardComponent } from './hover-card/hover-card.component';
+
 
 // import { NgbdCarouselConfig } from './carousel-config';
+import { CardComponent } from './Card/Card.component';
 @NgModule({
-  declarations: [			
+  declarations: [				
     AppComponent,
       FirstNavComponent,
       SliderShowComponent,
-      AuthPopupComponent
+      AuthPopupComponent,
+      HoverCardComponent,
+      CardComponent
    ],
   imports: [
     BrowserModule,
