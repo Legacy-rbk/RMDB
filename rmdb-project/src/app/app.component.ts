@@ -1,11 +1,10 @@
-import { Component } from '@angular/core';
+import { Component , Output } from '@angular/core';
 import { AuthPopupComponent } from './auth-popup/auth-popup.component';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import {Movie} from './Movie'
+import {DataService} from './data.service'
+import { Subscription } from 'rxjs';
 
-export interface DialogData {
-  animal: string;
-  name: string;
-}
 
 
 
@@ -19,22 +18,28 @@ export interface DialogData {
 
 export class AppComponent {
   title = 'rmdb-project';
+  moviesget:Subscription[]=[];
+  movies:Movie
+ 
 
-  animal: string;
-  name: string;
+ 
 
-  constructor(public dialog: MatDialog) {}
+
+  constructor(public dialog: MatDialog  , private  movie:DataService) { }
   openDialog(): void {
     const dialogRef = this.dialog.open(AuthPopupComponent, {
       width: '420px',
       height:'500px',
-      data: {name: this.name, animal: this.animal}
     });
 
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed');
-      this.animal = result;
     });
+  }
+
+  ngOnInit():void{
+    this.moviesget.push(this.movie.getConfig().subscribe(data=>this.movies=data))
+   
   }
 }
 

@@ -15,7 +15,7 @@ import { FormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {NgbPaginationModule, NgbAlertModule} from '@ng-bootstrap/ng-bootstrap';
 
-
+import { HttpClientModule } from '@angular/common/http';
 
 // import { NgbdCarouselConfig } from './carousel-config';
 import { CardComponent } from './Card/Card.component';
@@ -38,7 +38,8 @@ import { CardComponent } from './Card/Card.component';
     NgbModule,
     NgbPaginationModule,
     NgbAlertModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [{provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: {hasBackdrop: false}}],
   bootstrap: [AppComponent]

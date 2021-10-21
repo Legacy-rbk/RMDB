@@ -3,12 +3,13 @@
 <app-Slider-Show></app-Slider-Show>
 
 
-  <button mat-raised-button (click)="openDialog()">sign in</button>
+
   
 
 
 
-<app-Card></app-Card>
+<app-Card [movies]='movies'></app-Card>
+<button mat-raised-button (click)="openDialog()">sign in</button>
 
 <router-outlet></router-outlet>
 
