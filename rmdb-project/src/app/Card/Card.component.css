@@ -1,6 +1,31 @@
-.pic{
+/* .pic{
     display: flex;
     align-items: center; justify-content: center; flex-direction: column;
+} */
+ .pic{
+    display: flex;
+	flex-wrap: wrap;
+ }
+
+ .row {
+    display: flex;
+    flex-wrap:unset;
+    margin-right: 15px;
+    margin-left: 15px;
+    justify-content : space-between;
+    flex: 1 0 0;
+    width : 100%
+}
+.imgOfCard{
+    max-width: 100%;
+    height: auto;  
+    vertical-align: middle;
+    border-style: none;
+
+    flex: 1 0 1%;
+  box-sizing: border-box;
+ 
+    
 }
 
 
