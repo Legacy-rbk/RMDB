@@ -31,6 +31,8 @@
     "ngx-slick-carousel": "^0.5.1",
     "rxjs": "~6.6.0",
     "slick-carousel": "^1.8.1",
+    "save": "^2.4.0",
+    "template": "^0.17.5",
     "tslib": "^2.0.0",
     "zone.js": "~0.11.3"
   },
