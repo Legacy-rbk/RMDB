@@ -19,6 +19,7 @@ import { User } from './User';
 
 
 
+
 export class AppComponent {
   title = 'rmdb-project';
   moviesget: Subscription[] = [];
@@ -26,8 +27,12 @@ export class AppComponent {
   user: User;
   loggedin: boolean = false;
   error: string;
-
-
+  sliderConfig = {
+    slidesToShow: 4,
+    slidesToScroll: 2,
+    arrows: true,
+    autoplay: true
+  };
 
   constructor(public dialog: MatDialog, private movie: DataService, private auth: AuthService) { }
   openDialog(): void {

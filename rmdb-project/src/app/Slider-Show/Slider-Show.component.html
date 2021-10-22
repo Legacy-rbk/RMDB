@@ -1,10 +1,16 @@
 <ngb-carousel>
   <ng-template ngbSlide>
     <div class="picsum-img-wrapper">
+      <img class="d-block w-100" [src]=" movies[8].poster " alt="Movie" />
+    </div>
+    <div class="carousel-caption"></div>
+  </ng-template>
+  <ng-template ngbSlide>
+    <div class="picsum-img-wrapper">
       <img
         class="d-block w-100"
-        src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/202109/Pawan_Kalyan_Bhaavadeeyudu_Bha_0_1200x768.jpeg?5VfuHXGbKIvd5xht3Santp7QY_dqjzIR&size=770:433"
-        alt="Random first slide"
+        [src]="movies[7].poster"
+        alt="movie"
       />
     </div>
     <div class="carousel-caption"></div>
@@ -13,10 +19,8 @@
     <div class="picsum-img-wrapper">
       <img
         class="d-block w-100"
-        src="
-        https://images.livemint.com/img/2021/08/30/1600x900/Screenshot_2021-08-30_at_10.28.05_AM_1630299518787_1630299534724.png
-        "
-        alt="Random second slide"
+        [src]="movies[8].poster"
+        alt="movie"
       />
     </div>
     <div class="carousel-caption"></div>
@@ -25,10 +29,9 @@
     <div class="picsum-img-wrapper">
       <img
         class="d-block w-100"
-        src="
-        https://akm-img-a-in.tosshub.com/indiatoday/images/story/202109/Pawan_Kalyan_Bhaavadeeyudu_Bha_0_1200x768.jpeg?5VfuHXGbKIvd5xht3Santp7QY_dqjzIR&size=770:433
-        "
-        alt="Random third slide"
+        [src]="movies[9].poster"
+        
+        alt="movie"
       />
     </div>
     <div class="carousel-caption"></div>
@@ -37,22 +40,10 @@
     <div class="picsum-img-wrapper">
       <img
         class="d-block w-100"
-        src="
-        https://images.livemint.com/img/2021/08/30/1600x900/Screenshot_2021-08-30_at_10.28.05_AM_1630299518787_1630299534724.png
-        "
-        alt="Random fourth slide"
-      />
-    </div>
-    <div class="carousel-caption"></div>
-  </ng-template>
-  <ng-template ngbSlide>
-    <div class="picsum-img-wrapper">
-      <img
-        class="d-block w-100"
-        src="
-        https://akm-img-a-in.tosshub.com/indiatoday/images/story/202109/Pawan_Kalyan_Bhaavadeeyudu_Bha_0_1200x768.jpeg?5VfuHXGbKIvd5xht3Santp7QY_dqjzIR&size=770:433
-        "
-        alt="Random fourth slide"
+        [src]=" movies[1].poster "
+        
+        
+        alt="movie"
       />
     </div>
     <div class="carousel-caption"></div>

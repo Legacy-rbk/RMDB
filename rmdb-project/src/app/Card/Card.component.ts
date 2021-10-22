@@ -7,10 +7,14 @@ import {Movie} from '../Movie'
   styleUrls: ['./Card.component.css']
 })
 export class CardComponent implements OnInit {
+
+  
+
 @Input() movies:Movie[]
   constructor() { }
 
   ngOnInit() {
   }
+
 
 }
