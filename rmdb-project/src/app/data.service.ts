@@ -11,10 +11,17 @@ import {Movie} from './Movie'
 export class DataService {
 
   configUrl = 'http://localhost:3000/api/pop';
-
+  
   getConfig() {
   return this.http.get<Movie>(this.configUrl);
 }
+
+
+configUrl1 =  'http://localhost:3000/api/slider';
+getconfig1(){
+  return this.http.get<Movie>(this.configUrl1)
+}
+
 constructor(private http: HttpClient) {
   
  }
