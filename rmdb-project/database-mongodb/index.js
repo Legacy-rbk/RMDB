@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 // const dotenv = require ('dotenv')
 // dotenv.config()
 // const mongoUri = process.env.DBURL
-const uri= require ('./env')
+const uri= require ('./url')
 
 
 // var db = mongoose.connect(uri, {useCreateIndex: true, useNewUrlParser: true, useUnifiedTopology: true }, () => {

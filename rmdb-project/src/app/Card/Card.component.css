@@ -1,34 +1,143 @@
-/* .pic{
-    display: flex;
-    align-items: center; justify-content: center; flex-direction: column;
-} */
- .pic{
-    display: flex;
-	flex-wrap: wrap;
-    overflow-x : auto
+
+.imgg {
+  border-radius: 5px;
+  width:200px;
+  height: 250px
+}
+
+.movie {
+  margin: 0;
+  overflow-y : hidden ;
+  overflow-x : scroll;
+  width: 100%
+}
+.movie__images .thumbnails .carousel {
+  /* width:100%; */
+  display: flex;
+ }
+.slick-item {
+ transition: all 0.3s ease;
  }
 
- .pic::
-
- .row {
-    display: flex;
-    flex-wrap:unset;
-    margin-right: 15px;
-    margin-left: 15px;
-    justify-content : space-between;
-    flex: 1 0 0;
-    width : 100%
-}
-.imgOfCard{
-    max-width: 100%;
-    height: auto;  
-    vertical-align: middle;
-    border-style: none;
-
-    flex: 1 0 1%;
-  box-sizing: border-box;
- 
+.slick-item:hover {
+ transform: scale(1.02);
+cursor: pointer;
+      }
     
+
+/* div.thumbnails .carousel  */
+
+
+
+
+
+/* .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  font-family: "Quicksand", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s;
+}
+.overlay > * {
+  transform: translateY(200px);
+  transition: transform 0.3s;
+}
+.overlay:hover {
+  opacity: 1;
+}
+.overlay:hover > * {
+  transform: translateY(0);
+}
+.title {
+  font-size: 2em;
+  font-weight: bold;
+}
+.description {
+  font-size: 1.25em;
+  margin-top: 0.5em;
+} */
+
+
+
+
+
+.slick-prev .slick-next {
+  position: absolute;
+  display: block;
+  height: 20px;
+  width: 20px;
+  line-height: 0px;
+  font-size: 0px;
+  cursor: pointer;
+  background: transparent;
+  color: transparent;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  padding: 0;
+  border: none;
+  outline: none;
+}
+.slick-prev:hover, .slick-prev:focus,
+.slick-next:hover,
+.slick-next:focus {
+  outline: none;
+  background: transparent;
+  color: transparent;
+}
+.slick-prev:hover:before, .slick-prev:focus:before,
+.slick-next:hover:before,
+.slick-next:focus:before {
+  opacity: 1;
+}
+.slick-prev.slick-disabled:before,
+.slick-next.slick-disabled:before {
+  opacity: 0.25;
+}
+.slick-prev:before,
+.slick-next:before {
+  font-family: "slick";
+  font-size: 20px;
+  line-height: 1;
+  color: white;
+  opacity: 0.75;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
+.slick-prev {
+  left: -25px;
+}
+[dir=rtl] .slick-prev {
+  left: auto;
+  right: -25px;
+}
+.slick-prev:before {
+  content: "←";
+}
+[dir=rtl] .slick-prev:before {
+  content: "→";
+}
 
+.slick-next {
+  right: -25px;
+}
+[dir=rtl] .slick-next {
+  left: -25px;
+  right: auto;
+}
+.slick-next:before {
+  content: "→";
+}
+[dir=rtl] .slick-next:before {
+  content: "←";
+}

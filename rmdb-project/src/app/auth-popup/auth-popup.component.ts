@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewEncapsulation , Inject } from '@angular/core';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
-import { DialogData } from '../app.component';
+
 import {User} from '../User'
 
 @Component({
@@ -13,14 +13,19 @@ export class AuthPopupComponent implements OnInit {
 
 constructor(
   public dialogRef: MatDialogRef<AuthPopupComponent>,
-  @Inject(MAT_DIALOG_DATA) public data: DialogData) {}
+  @Inject(MAT_DIALOG_DATA) public data: '') {}
 
+  sign:Boolean=false;
 
   user: User = {
     email: '',
     username: '',
     password:''
   };
+
+  switch():void{
+    this.sign=!this.sign
+  }
   
 onNoClick(): void {
   this.dialogRef.close();

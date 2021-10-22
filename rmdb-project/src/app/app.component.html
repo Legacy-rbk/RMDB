@@ -1,14 +1,8 @@
 <app-First-Nav></app-First-Nav>
 
-<app-Slider-Show></app-Slider-Show>
+<app-Slider-Show [movies]="movies"></app-Slider-Show>
 
-
-  <button mat-raised-button (click)="openDialog()">sign in</button>
-  
-
-<app-hover-card></app-hover-card>
-
-<app-Card></app-Card>
+<app-Card [movies]="movies"></app-Card>
+<button mat-raised-button (click)="openDialog()">sign in</button>
 
 <router-outlet></router-outlet>
-

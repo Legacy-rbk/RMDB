@@ -14,8 +14,8 @@ import {MatDialogModule ,MAT_DIALOG_DEFAULT_OPTIONS} from '@angular/material/dia
 import { FormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {NgbPaginationModule, NgbAlertModule} from '@ng-bootstrap/ng-bootstrap';
-import { HoverCardComponent } from './hover-card/hover-card.component';
-
+import {SlickCarouselModule} from 'ngx-slick-carousel';
+import { HttpClientModule } from '@angular/common/http';
 
 // import { NgbdCarouselConfig } from './carousel-config';
 import { CardComponent } from './Card/Card.component';
@@ -25,7 +25,7 @@ import { CardComponent } from './Card/Card.component';
       FirstNavComponent,
       SliderShowComponent,
       AuthPopupComponent,
-      HoverCardComponent,
+   
       CardComponent
    ],
   imports: [
@@ -38,7 +38,9 @@ import { CardComponent } from './Card/Card.component';
     NgbModule,
     NgbPaginationModule,
     NgbAlertModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
+    SlickCarouselModule
   ],
   providers: [{provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: {hasBackdrop: false}}],
   bootstrap: [AppComponent]

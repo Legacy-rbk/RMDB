@@ -9,11 +9,18 @@ const  Popular=require('../database-mongodb/popular')
 const Tv = require('../database-mongodb/Tv');
 const morgan = require('morgan');
 
+
+
 app.use(morgan('dev'))
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static(__dirname + '/../react-client/dist'));
+app.use(express.static(__dirname + '/../dist/rmdb-project/'));
+
+
+app.get('/',(req,res)=>{
+  res.render('index')
+})
 
 app.get('/api/videos', function(req, res) {
   Video.find({})
