@@ -1,8 +1,28 @@
 <app-First-Nav></app-First-Nav>
 
+
 <app-Slider-Show ></app-Slider-Show>
 
-<app-Card [movies]="movies"></app-Card>
-<button mat-raised-button (click)="openDialog()">sign in</button>
+
+
+<app-Card [movies]='movies'></app-Card>
+<div *ngIf="loggedin === false">
+ <button mat-raised-button (click)="openDialog()">sign in</button>   
+</div>
+<div *ngIf="error">{{error}}</div>
 
 <router-outlet></router-outlet>
+
+
+
+<!-- <div *ngIf='user'>
+<div *ngIf='user.username'>
+    <div>{{user.email}}</div>
+    <div>{{user.username}}</div>
+    <div>{{user.password}}</div>
+</div>
+<div *ngIf="user.username === '' ">
+    <div>{{user.email}}</div>
+    <div>{{user.password}}</div>
+</div>
+</div>  -->

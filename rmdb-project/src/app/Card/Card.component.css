@@ -1,30 +1,44 @@
-.pic {
+
+.imgg {
+  border-radius: 5px;
+  width:200px;
+  height: 280px
+}
+
+.movie {
+  margin: 0;
+  overflow-y : hidden ;
+  overflow-x : scroll;
+  width: 100%
+}
+.movie__images .thumbnails .carousel {
+  /* width:100%; */
   display: flex;
-  flex-wrap: wrap;
-}
+ }
+.slick-item {
+ transition: all 0.9s ease;
+ }
 
-.row {
-  display: flex;
-  flex-wrap: unset;
-  margin-right: 15px;
-  margin-left: 15px;
-  justify-content: space-between;
-  flex: 1 0 0;
-  width: 100%;
-}
+.slick-item:hover {
+ transform: scale(1.02);
+cursor: pointer;
+      }
 
-.image {
-  transition: transform 0.3s;
-}
-.image:hover {
-  transform: scale(1.3);
-}
 
-.img {
-  display: block;
-  width: 100%;
-}
-.overlay {
+      .carousel-control-next-icon{
+        background-color : white ;
+        width : 250px ;
+        height : 100px ; 
+
+      }
+
+/* div.thumbnails .carousel  */
+
+
+
+
+
+/* .overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -57,4 +71,6 @@
 .description {
   font-size: 1.25em;
   margin-top: 0.5em;
-}
+} */
+
+
