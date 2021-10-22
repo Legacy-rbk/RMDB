@@ -1,11 +1,11 @@
 import { Component, OnInit, HostListener,ElementRef, ViewChild } from '@angular/core';
 
 @Component({
-  selector: 'app-First-Nav',
-  templateUrl: './First-Nav.component.html',
-  styleUrls: ['./First-Nav.component.scss']
+  selector: 'app-Second-Nav',
+  templateUrl: './Second-Nav.component.html',
+  styleUrls: ['./Second-Nav.component.scss']
 })
-export class FirstNavComponent implements OnInit {
+export class SecondNavComponent implements OnInit {
   sticky = false;
 
   constructor() { }
@@ -14,10 +14,11 @@ export class FirstNavComponent implements OnInit {
   }
   @ViewChild('stickHeader') header: ElementRef;
   @HostListener('window:scroll', [])
+
   handleScroll() {
     const windowScroll = document.documentElement.scrollTop;
 
-    if (windowScroll) {
+    if (windowScroll>=50) {
       this.sticky = true;
     } else {
       this.sticky = false;

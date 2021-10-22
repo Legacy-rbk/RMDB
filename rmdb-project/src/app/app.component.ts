@@ -20,10 +20,15 @@ export class AppComponent {
   title = 'rmdb-project';
   moviesget:Subscription[]=[];
   movies:Movie
- 
+ logged='false'
 
  
-
+sliderConfig = {
+    slidesToShow: 9,
+    slidesToScroll: 2,
+    arrows: true,
+    autoplay: false
+  };
 
   constructor(public dialog: MatDialog  , private  movie:DataService) { }
   openDialog(): void {
