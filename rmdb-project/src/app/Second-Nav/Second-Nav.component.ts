@@ -18,7 +18,7 @@ export class SecondNavComponent implements OnInit {
   handleScroll() {
     const windowScroll = document.documentElement.scrollTop;
 
-    if (windowScroll>=50) {
+    if (windowScroll) {
       this.sticky = true;
     } else {
       this.sticky = false;

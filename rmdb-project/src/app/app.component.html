@@ -1,5 +1,10 @@
+<div *ngIf='logged'>
 <app-First-Nav></app-First-Nav>
+</div>
+<div *ngIf="!logged">
+<app-Second-Nav></app-Second-Nav>
 
+</div>
 <app-Slider-Show></app-Slider-Show>
 
 
