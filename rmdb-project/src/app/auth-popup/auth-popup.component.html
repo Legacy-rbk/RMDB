@@ -3,12 +3,14 @@
 
 <h1 mat-dialog-title>Sign In</h1>
 <div mat-dialog-content>
-  <input id="email" [(ngModel)]="user.email" placeholder="email">
-  <input type="password" id="password" [(ngModel)]="user.password" placeholder="password">
+  <mat-form-field appearance="fill">
+    <input id="email" [(ngModel)]="user.email" placeholder="email">
+    <input type="password" id="password" [(ngModel)]="user.password" placeholder="password">
+  </mat-form-field>
 </div>
 <div mat-dialog-actions>
-  <button mat-button (click)="onNoClick()">close</button>
-  <button mat-button (click)="onNoClick()">Sign In</button>
+  <button mat-button mat-dialog-close>close</button>
+  <button mat-button  [mat-dialog-close]="user" cdkFocusInitial>Sign In</button>
   <a (click)="switch()" >create an account ?</a>
 </div>
 
@@ -16,16 +18,17 @@
 </div>
 
 <div *ngIf="sign === true">
-
   <h1 mat-dialog-title>Sign Up</h1>
   <div mat-dialog-content>
+    <mat-form-field appearance="fill">
     <input id="email" [(ngModel)]="user.email" placeholder="email">
     <input id="username" [(ngModel)]="user.username" placeholder="username">
     <input type="password" id="password" [(ngModel)]="user.password" placeholder="password">
+  </mat-form-field>
   </div>
   <div mat-dialog-actions>
-    <button mat-button (click)="onNoClick()">close</button>
-    <button mat-button (click)="onNoClick()">Sign Up</button>
+    <button mat-button mat-dialog-close>close</button>
+    <button mat-button [mat-dialog-close]="user" cdkFocusInitial>Sign Up</button>
     <a (click)="switch()" >already have an account ?</a>
   </div>
   
