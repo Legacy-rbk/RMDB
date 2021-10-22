@@ -16,14 +16,20 @@ import { Subscription } from 'rxjs';
 
 
 
+
 export class AppComponent {
   title = 'rmdb-project';
   moviesget:Subscription[]=[];
-  movies:Movie
+  movies:Movie;
  
 
  
-
+  sliderConfig = {
+    slidesToShow: 4,
+    slidesToScroll: 2,
+    arrows: true,
+    autoplay: true
+  };
 
   constructor(public dialog: MatDialog  , private  movie:DataService) { }
   openDialog(): void {
