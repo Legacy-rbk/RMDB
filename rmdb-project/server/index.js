@@ -6,7 +6,7 @@ const app = express();
 const PORT = 3000;
 const crypt = require('./hash')
 const  Popular=require('../database-mongodb/popular')
-const Tv = require('../database-mongodb/Tv');
+const Slider = require('../database-mongodb/movieSlider');
 const morgan = require('morgan');
 
 
@@ -62,8 +62,8 @@ app.get('/api/videos/:videoId', function(req, res) {
     });
 });
 
-app.get('/api/tv', function(req, res) {
-  Tv.find({})
+app.get('/api/slider', function(req, res) {
+  Slider.find({})
     .then((result)=>{
       res.status(201).send(result);
     })
@@ -72,8 +72,8 @@ app.get('/api/tv', function(req, res) {
     });
 });
 
-app.get('/api/tv/:tvId', function(req, res) {
-  Tv.findOne({_id: req.params.tvId})
+app.get('/api/slider/:sliderId', function(req, res) {
+  Slider.findOne({_id: req.params.sliderId})
     .then((result)=>{
       res.status(201).send(result);
     })
@@ -158,25 +158,25 @@ app.post('/signin', (req, res) => {
         })
         .catch((err)=>res.status(403).send(err))
 })
-app.get('/api/tv', function(req, res) {
-  Tv.find({})
-    .then((result)=>{
-      res.status(201).send(result);
-    })
-    .catch(()=>{
-      res.status(403).send('failed');
-    });
-});
+// app.get('/api/tv', function(req, res) {
+//   Tv.find({})
+//     .then((result)=>{
+//       res.status(201).send(result);
+//     })
+//     .catch(()=>{
+//       res.status(403).send('failed');
+//     });
+// });
 
-app.get('/api/tv/:tvId', function(req, res) {
-  Tv.findOne({_id: req.params.tvId})
-    .then((result)=>{
-      res.status(201).send(result);
-    })
-    .catch(()=>{
-      res.status(403).send('failed');
-    });
-});
+// app.get('/api/tv/:tvId', function(req, res) {
+//   Tv.findOne({_id: req.params.tvId})
+//     .then((result)=>{
+//       res.status(201).send(result);
+//     })
+//     .catch(()=>{
+//       res.status(403).send('failed');
+//     });
+// });
 
 
 app.listen(PORT, () => { console.log('yemshy 3al 3000') });

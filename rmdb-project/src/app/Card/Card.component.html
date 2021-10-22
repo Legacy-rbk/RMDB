@@ -1,14 +1,9 @@
 <div class="container">
   <div style="padding: 20px">
-    <!-- <h1 style="margin: auto; padding: 50px">En ce moment au cinéma :</h1> -->
-
     <div class="pic">
       <div class="row">
         <div class="image">
-          <img
-            class="img"
-            src={{movies[0].poster}}
-          />
+          <img class="img" src="{{ movies[0].poster }}" />
           <div class="overlay">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -29,7 +24,7 @@
             <br />
             <br />
 
-            <div class="title"> {{movies[0].title}} </div>
+            <div class="title">{{ movies[0].title }}</div>
             <p class="description">some description here....</p>
             <br />
             <br />

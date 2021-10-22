@@ -1,60 +1,95 @@
-<ngb-carousel>
+<ngb-carousel >
+  <ng-template ngbSlide>
+    <div class="picsum-img-wrapper">
+   
+      <img
+        class="d-block w-100"
+        src={{sliders[0].poster}}
+        alt="Random first slide"
+      />
+      
+    </div>
+
+    <div class="carousel-caption left-caption text-left">
+        <div class="title">{{ sliders[0].title }}</div>
+      
+    <p class="description">{{sliders[0].description}}</p>
+    <br />
+    <br />
+    <button type="button" class="btn btn-secondary">Play</button>
+    <button type="button" class="btn btn-secondary">+ WatchList</button>
+   
+    </div>
+    
+  </ng-template>
   <ng-template ngbSlide>
     <div class="picsum-img-wrapper">
       <img
         class="d-block w-100"
-        src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/202109/Pawan_Kalyan_Bhaavadeeyudu_Bha_0_1200x768.jpeg?5VfuHXGbKIvd5xht3Santp7QY_dqjzIR&size=770:433"
+        src={{sliders[1].poster}}
         alt="Random first slide"
       />
     </div>
-    <div class="carousel-caption"></div>
+    <div class="carousel-caption"><div class="title">{{ sliders[1].title }}</div>
+    <br />
+    <br />
+    <p class="description">{{sliders[1].description}}</p>
+    <br />
+    <br />
+    <button type="button" class="btn btn-secondary">+ WatchList</button></div>
   </ng-template>
   <ng-template ngbSlide>
     <div class="picsum-img-wrapper">
       <img
         class="d-block w-100"
-        src="
-        https://images.livemint.com/img/2021/08/30/1600x900/Screenshot_2021-08-30_at_10.28.05_AM_1630299518787_1630299534724.png
-        "
-        alt="Random second slide"
+        src={{sliders[2].poster}}
+        alt="Random first slide"
       />
     </div>
-    <div class="carousel-caption"></div>
+    <div class="carousel-caption">
+      <div class="title">{{ sliders[2].title }}</div>
+      <br />
+      <br />
+      <p class="description">{{sliders[2].description}}</p>
+      <br />
+      <br />
+      <button type="button" class="btn btn-secondary">+ WatchList</button>
+    </div>
   </ng-template>
   <ng-template ngbSlide>
     <div class="picsum-img-wrapper">
       <img
         class="d-block w-100"
-        src="
-        https://akm-img-a-in.tosshub.com/indiatoday/images/story/202109/Pawan_Kalyan_Bhaavadeeyudu_Bha_0_1200x768.jpeg?5VfuHXGbKIvd5xht3Santp7QY_dqjzIR&size=770:433
-        "
-        alt="Random third slide"
+        src={{sliders[3].poster}}
+        alt="Random first slide"
       />
     </div>
-    <div class="carousel-caption"></div>
+    <div class="carousel-caption">
+      <div class="title">{{ sliders[3].title }}</div>
+      <br />
+      <br />
+      <p class="description">{{sliders[3].description}}</p>
+      <br />
+      <br />
+      <button type="button" class="btn btn-secondary">+ WatchList</button>
+    </div>
   </ng-template>
   <ng-template ngbSlide>
     <div class="picsum-img-wrapper">
       <img
         class="d-block w-100"
-        src="
-        https://images.livemint.com/img/2021/08/30/1600x900/Screenshot_2021-08-30_at_10.28.05_AM_1630299518787_1630299534724.png
-        "
-        alt="Random fourth slide"
+        src={{sliders[4].poster}}
+        alt="Random first slide"
       />
     </div>
-    <div class="carousel-caption"></div>
-  </ng-template>
-  <ng-template ngbSlide>
-    <div class="picsum-img-wrapper">
-      <img
-        class="d-block w-100"
-        src="
-        https://akm-img-a-in.tosshub.com/indiatoday/images/story/202109/Pawan_Kalyan_Bhaavadeeyudu_Bha_0_1200x768.jpeg?5VfuHXGbKIvd5xht3Santp7QY_dqjzIR&size=770:433
-        "
-        alt="Random fourth slide"
-      />
+    <div class="carousel-caption">
+      <div class="title">{{ sliders[4].title }}</div>
+      <br />
+      <br />
+      <p class="description">{{sliders[4].description}}</p>
+      <br />
+      <br />
+      <button type="button" class="btn btn-secondary">+ WatchList</button>
     </div>
-    <div class="carousel-caption"></div>
   </ng-template>
 </ngb-carousel>
