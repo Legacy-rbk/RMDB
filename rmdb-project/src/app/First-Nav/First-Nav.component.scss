@@ -1,3 +1,4 @@
+
 .navbar {
   display: flex;
   flex-direction: column;
@@ -105,31 +106,33 @@
     }
   }
 
-  .header__left {
+  .header__left ul{
     flex:1;
     display: flex;
     align-items: center;
     gap: 50px;
     
-
+   
     img {
       margin-left: 40px;
       height:100%;
       width:100px;
       margin-top: 5px;
     }
+  
+    li a {
+      color: rgb(219, 213, 213);
+      display: inline-block;
+      font-size: 25px;
+      font-weight: normal;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
 
-    li.active {
-      a {
-        color: rgb(216, 211, 211);
-        display: inline-block;
-        font-size: 18px;
-        font-weight: normal;
-        letter-spacing: 0.8px;
-        text-transform: uppercase;
-      }
+     
     }
   }
+
+
 
   .header__right ul {
     flex: 1;
@@ -162,6 +165,9 @@ margin-left:0px;
     }
   }
 
+
+
+
   .body {
     overflow-y: hidden;
     overflow-x: scroll;
@@ -173,6 +179,8 @@ margin-left:0px;
     }
   }
 }
+
+
 
 
 ul {
