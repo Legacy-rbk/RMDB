@@ -8,17 +8,13 @@ import {Movie} from '../Movie'
 })
 export class CardComponent implements OnInit {
 
-  sliderConfig = {
-    slidesToShow: 4,
-    slidesToScroll: 2,
-    arrows: true,
-    autoplay: true
-  };
+  
 
 @Input() movies:Movie[]
   constructor() { }
 
   ngOnInit() {
   }
+
 
 }

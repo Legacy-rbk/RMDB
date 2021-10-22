@@ -18,3 +18,21 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 body {
   background-color: #1d1d1d;
 }
+
+
+
+.slick-next {
+  right:20px;
+  z-index: 99;
+  &:before {
+    font-size: 80px;
+  }
+}
+
+.slick-prev {
+  left: 20px;
+  z-index: 99;
+  &:before {
+    font-size: 80px;
+  }
+}
