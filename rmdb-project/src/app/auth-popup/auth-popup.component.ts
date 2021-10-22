@@ -1,7 +1,7 @@
-import { Component, OnInit, ViewEncapsulation , Inject } from '@angular/core';
-import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import { Component, OnInit, ViewEncapsulation, Inject, Output, EventEmitter } from '@angular/core';
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
-import {User} from '../User'
+import { User } from '../User'
 
 @Component({
   selector: 'app-auth-popup',
@@ -11,25 +11,29 @@ import {User} from '../User'
 })
 export class AuthPopupComponent implements OnInit {
 
-constructor(
-  public dialogRef: MatDialogRef<AuthPopupComponent>,
-  @Inject(MAT_DIALOG_DATA) public data: '') {}
+  @Output() signInData:EventEmitter<User>=new EventEmitter();
 
-  sign:Boolean=false;
+  constructor(
+    public dialogRef: MatDialogRef<AuthPopupComponent>,
+    @Inject(MAT_DIALOG_DATA) public data: '') { }
+
+  sign: Boolean = false;
+
 
   user: User = {
+    _id:'',
     email: '',
     username: '',
-    password:''
+    password: ''
   };
 
-  switch():void{
-    this.sign=!this.sign
+  switch(): void {
+    this.sign = !this.sign
   }
-  
-onNoClick(): void {
-  this.dialogRef.close();
-}
+
+  onNoClick(): void {
+    this.dialogRef.close();
+  }
   ngOnInit() {
   }
 
