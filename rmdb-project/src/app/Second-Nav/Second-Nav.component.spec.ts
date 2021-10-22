@@ -3,21 +3,21 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
-import { HoverCardComponent } from './hover-card.component';
+import { SecondNavComponent } from './Second-Nav.component';
 
-describe('HoverCardComponent', () => {
-  let component: HoverCardComponent;
-  let fixture: ComponentFixture<HoverCardComponent>;
+describe('SecondNavComponent', () => {
+  let component: SecondNavComponent;
+  let fixture: ComponentFixture<SecondNavComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ HoverCardComponent ]
+      declarations: [ SecondNavComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(HoverCardComponent);
+    fixture = TestBed.createComponent(SecondNavComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

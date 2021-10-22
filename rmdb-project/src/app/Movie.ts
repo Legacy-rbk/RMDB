@@ -4,7 +4,7 @@ export interface Movie {
     directors: string[];
     genres:string[];
     imdb_rating:number;
-    language:string;
+    language:string[];
     release_date:Date;
     poster: string,
     stars: string[],
@@ -13,3 +13,4 @@ export interface Movie {
     youtube_trailer_key: String,
     comments: string[]  
   }
+  

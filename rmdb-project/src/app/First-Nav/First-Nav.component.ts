@@ -5,9 +5,12 @@ import { Component, OnInit, HostListener,ElementRef, ViewChild } from '@angular/
   templateUrl: './First-Nav.component.html',
   styleUrls: ['./First-Nav.component.scss']
 })
+
 export class FirstNavComponent implements OnInit {
   sticky = false;
-
+  refresh(): void {
+    window.location.reload();
+}
   constructor() { }
 
   ngOnInit() {

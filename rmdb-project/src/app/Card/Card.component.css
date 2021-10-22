@@ -1,31 +1,76 @@
-/* .pic{
-    display: flex;
-    align-items: center; justify-content: center; flex-direction: column;
-} */
- .pic{
-    display: flex;
-	flex-wrap: wrap;
+
+.imgg {
+  border-radius: 5px;
+  width:200px;
+  height: 280px
+}
+
+.movie {
+  margin: 0;
+  overflow-y : hidden ;
+  overflow-x : scroll;
+  width: 100%
+}
+.movie__images .thumbnails .carousel {
+  /* width:100%; */
+  display: flex;
+ }
+.slick-item {
+ transition: all 0.9s ease;
  }
 
- .row {
-    display: flex;
-    flex-wrap:unset;
-    margin-right: 15px;
-    margin-left: 15px;
-    justify-content : space-between;
-    flex: 1 0 0;
-    width : 100%
-}
-.imgOfCard{
-    
-  
-    vertical-align: middle;
-    border-style: none;
+.slick-item:hover {
+ transform: scale(1.02);
+cursor: pointer;
+      }
 
-    flex: 1 0 1%;
-  box-sizing: border-box;
- 
-    
+
+      .carousel-control-next-icon{
+        background-color : white ;
+        width : 250px ;
+        height : 100px ; 
+
+      }
+
+/* div.thumbnails .carousel  */
+
+
+
+
+
+/* .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  font-family: "Quicksand", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s;
 }
+.overlay > * {
+  transform: translateY(200px);
+  transition: transform 0.3s;
+}
+.overlay:hover {
+  opacity: 1;
+}
+.overlay:hover > * {
+  transform: translateY(0);
+}
+.title {
+
+  font-size: 2em;
+  font-weight: bold;
+}
+.description {
+  font-size: 1.25em;
+  margin-top: 0.5em;
+} */
 
 
