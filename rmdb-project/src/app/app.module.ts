@@ -24,16 +24,18 @@ import {SearchComponent} from './Search/Search.component';
 import { CardComponent } from './Card/Card.component';
 
 import {searchModule} from './search/search.module';
+import { MoviesPopUpComponent } from './MoviesPopUp/MoviesPopUp.component';
 
 @NgModule({
-  declarations: [					
+  declarations: [						
     AppComponent,
       FirstNavComponent,
       SliderShowComponent,
       AuthPopupComponent,
       CardComponent,
       SecondNavComponent,
-      SearchComponent
+      SearchComponent,
+      MoviesPopUpComponent
    ]
   
   ,
@@ -56,7 +58,8 @@ import {searchModule} from './search/search.module';
   ],
   providers: [{provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: {hasBackdrop: true}}],
   entryComponents: [
-    AuthPopupComponent
+    AuthPopupComponent,
+    MoviesPopUpComponent
   ],
   bootstrap: [AppComponent]
  
