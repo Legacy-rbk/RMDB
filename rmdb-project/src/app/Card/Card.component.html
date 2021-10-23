@@ -1,41 +1,16 @@
-<div class="listing">
-  <div class="row">
-    <div class="listing__items">
-      <div class="listing-item-style" *ngFor="let film of movies">
-        <div class="overlay">
-          <div class="hover">
-            <i class="material-icons">play_arrow</i> PLAY NOW
-          </div>
+<div class="d-inline-flex p-2">
+  <div class="movie-container">
+    <div class="image-container d-flex justify-content-center">
+      <!-- <h2>Popular</h2> -->
+      <div class="d-flex align-items-center">
+        <div *ngFor="let film of movies" ngbSlide>
+          <img src="{{ film.poster }}" alt="{{ film.title }}" />
         </div>
-        <img src="{{ film?.poster }}" />
-
-        <h6>{{ film?.title }}</h6>
       </div>
     </div>
   </div>
 </div>
 
-<!-- <ngb-carousel>
-  <ng-template ngbSlide>
-    <div class="listing">
-      <div class="movie__images" style="margin-top: 8rem">
-        <h2>Popular</h2>
-        <div class="thumbnails">
-          <ngx-slick-carousel [config]="sliderConfig" class="carousel">
-            <div class="listing-item-style" *ngFor="let film of movies" ngbSlide>
-              <img
-                class="imgg"
-                src="{{ film.poster }}"
-                alt="{{ film.title }}"
-              />
-            </div>
-            <div class="carousel-caption"></div>
-          </ngx-slick-carousel>
-        </div>
-      </div>
-    </div>
-  </ng-template>
-</ngb-carousel> -->
 <!-- <div class="overlay">
             <svg
               xmlns="http://www.w3.org/2000/svg"
