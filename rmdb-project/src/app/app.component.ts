@@ -18,9 +18,6 @@ import { User } from './User';
   styleUrls: ['./app.component.scss']
 })
 
-
-
-
 export class AppComponent {
   title = 'rmdb-project';
   moviesget: Subscription[] = [];

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit , Input } from '@angular/core';
 import {DataService} from '../data.service'
 import { Subscription } from 'rxjs';
 import {Movie} from '../Movie'
@@ -14,7 +14,14 @@ export class SliderShowComponent {
  
   getSliders:Subscription[]=[]
   sliders:Movie
+  @Input() loggedin: boolean 
+ watchList(){
+ if(this.loggedin === false){
+   alert('you must login first !')
+ }else
+  alert('added to watchlist')
 
+}
 
   constructor( private  movie:DataService) { 
    
