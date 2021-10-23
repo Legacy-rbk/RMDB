@@ -6,7 +6,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  height: 30vh;
+  height: 13vh;
   font-size: 4em;
   font-weight: bold;
   color: yellow;
@@ -18,10 +18,11 @@
   margin-top: 0.5em;
   word-wrap: break-word;
   display: inline;
-  line-height: 1.4; 
-  padding: 2px 0; 
+  line-height: 1.4;
+  padding: 2px 0;
   width: 400px;
   margin: 20px auto;
 }
-
- 
+.opacity {
+  opacity: 0.8 !important;
+}
