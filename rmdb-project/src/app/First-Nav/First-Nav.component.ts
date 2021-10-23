@@ -1,4 +1,4 @@
-import { Component, OnInit, HostListener,ElementRef, ViewChild } from '@angular/core';
+import { Component, OnInit, HostListener, ElementRef, ViewChild, Input } from '@angular/core';
 
 @Component({
   selector: 'app-First-Nav',
@@ -7,10 +7,14 @@ import { Component, OnInit, HostListener,ElementRef, ViewChild } from '@angular/
 })
 
 export class FirstNavComponent implements OnInit {
+  @Input() navOpen: Function;
+
   sticky = false;
+
   refresh(): void {
     window.location.reload();
-}
+  }
+  
   constructor() { }
 
   ngOnInit() {
@@ -26,4 +30,6 @@ export class FirstNavComponent implements OnInit {
       this.sticky = false;
     }
   }
+
+
 }

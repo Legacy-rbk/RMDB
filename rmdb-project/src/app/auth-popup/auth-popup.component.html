@@ -1,5 +1,5 @@
 
-<div *ngIf="sign === false">
+<div  *ngIf="sign === false">
 
 <h1 mat-dialog-title>Sign In</h1>
 <div mat-dialog-content>
@@ -10,7 +10,7 @@
 </div>
 <div mat-dialog-actions>
   <button mat-button mat-dialog-close>close</button>
-  <button mat-button  [mat-dialog-close]="user" cdkFocusInitial>Sign In</button>
+  <button mat-button mat-dialog-close (click)="data.signin(user)"   cdkFocusInitial>Sign In</button>
   <a (click)="switch()" >create an account ?</a>
 </div>
 
@@ -28,7 +28,7 @@
   </div>
   <div mat-dialog-actions>
     <button mat-button mat-dialog-close>close</button>
-    <button mat-button [mat-dialog-close]="user" cdkFocusInitial>Sign Up</button>
+    <button mat-button mat-dialog-close (click)="data.signup(user)" cdkFocusInitial>Sign Up</button>
     <a (click)="switch()" >already have an account ?</a>
   </div>
   
