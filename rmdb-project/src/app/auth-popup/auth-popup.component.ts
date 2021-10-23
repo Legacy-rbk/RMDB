@@ -8,6 +8,7 @@ import { User } from '../User'
   templateUrl: './auth-popup.component.html',
   styleUrls: ['./auth-popup.component.css'],
   encapsulation: ViewEncapsulation.None
+ 
 })
 export class AuthPopupComponent implements OnInit {
 
