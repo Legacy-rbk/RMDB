@@ -18,6 +18,8 @@ import {SlickCarouselModule} from 'ngx-slick-carousel';
 import { HttpClientModule } from '@angular/common/http';
 
 
+
+
 import { SecondNavComponent } from './Second-Nav/Second-Nav.component';
 
 // import { NgbdCarouselConfig } from './carousel-config';
