@@ -1,5 +1,93 @@
 
-.imgg {
+
+.listing {
+  margin : 2.5rem 1.5rem;
+  overflow-y : hidden ;
+  overflow-x : scroll;
+  display : flex ;
+  flex-direction : flex-start;
+}
+
+.listing__head {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 1.5rem;
+  @media (min-width: $breakpoint-large) {
+    margin-bottom: 2rem;
+  }
+}
+
+.listing__title {
+  font-size: 1.8rem;
+  letter-spacing: $letter-spacing;
+
+  @media (min-width: $breakpoint-large) {
+    font-size: 2.4rem;
+  }
+}
+
+
+.listing-item-style {
+  background-color: #212121;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: $base-font-color;
+  border-radius: 5px;
+  margin: 11px 5px 11px;
+  position: relative;
+  cursor: pointer;
+
+}
+
+
+.imgg{
+
+  width: 100%;
+      transition: all .5s ease-out;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+}
+
+.listing-item-style:hover .overlay {
+  opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .imgg {
   border-radius: 5px;
   width:200px;
   height: 280px
@@ -9,30 +97,26 @@
   margin: 0;
   overflow-y : hidden ;
   overflow-x : scroll;
-  width: 100%
+  width: 100%;
+
 }
 .movie__images .thumbnails .carousel {
   /* width:100%; */
-  display: flex;
- }
-.slick-item {
- transition: all 0.9s ease;
- }
+  /* display: flex;
+  position : relative ;
+  animation : 10s slider infinite ;
+  float : left; */
 
-.slick-item:hover {
+ /* }
+.slick-item {
+ transition: all 0.9s ease; */
+ /* } */
+
+/* .slick-item:hover {
  transform: scale(1.02);
 cursor: pointer;
-      }
+      } */
 
-
-      .carousel-control-next-icon{
-        background-color : white ;
-        width : 250px ;
-        height : 100px ; 
-
-      }
-
-/* div.thumbnails .carousel  */
 
 
 

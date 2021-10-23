@@ -1,24 +1,4 @@
-<ngb-carousel>
-  <ng-template ngbSlide>
-    <div class="movie">
-      <div class="movie__images" style="margin-top: 8rem">
-        <h2>Popular</h2>
-        <div class="thumbnails">
-          <ngx-slick-carousel [config]="sliderConfig" class="carousel">
-            <div class="slick-item" *ngFor="let film of movies" ngbSlide>
-              <img
-                class="imgg"
-                src="{{ film.poster }}"
-                alt="{{ film.title }}"
-              />
-            </div>
-            <div class="carousel-caption"></div>
-          </ngx-slick-carousel>
-        </div>
-      </div>
-    </div>
-  </ng-template>
-</ngb-carousel>
+
 
 <!-- <div class="overlay">
             <svg
