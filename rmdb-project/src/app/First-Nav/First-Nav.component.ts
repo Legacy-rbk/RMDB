@@ -1,5 +1,4 @@
 import { Component, OnInit, HostListener,ElementRef, ViewChild } from '@angular/core';
-
 @Component({
   selector: 'app-First-Nav',
   templateUrl: './First-Nav.component.html',
