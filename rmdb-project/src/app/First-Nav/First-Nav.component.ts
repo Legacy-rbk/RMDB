@@ -1,5 +1,6 @@
 import { Component, OnInit, HostListener,ElementRef, ViewChild } from '@angular/core';
 
+
 @Component({
   selector: 'app-First-Nav',
   templateUrl: './First-Nav.component.html',
@@ -11,6 +12,8 @@ export class FirstNavComponent implements OnInit {
   refresh(): void {
     window.location.reload();
 }
+
+
   constructor() { }
 
   ngOnInit() {
