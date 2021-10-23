@@ -1,6 +1,5 @@
 import { Component, OnInit ,Input} from '@angular/core';
 import {Movie} from '../Movie'
-
 @Component({
   selector: 'app-Card',
   templateUrl: './Card.component.html',

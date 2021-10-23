@@ -11,6 +11,7 @@ import { User } from './User';
 
 
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -34,44 +35,66 @@ export class AppComponent {
     autoplay: true
   };
 
+
+  SignIn = (user: User) => {
+    console.log(user)
+    if (user.email !== '' && user.password !== '') {
+      this.auth.signIn(user.email, user.password).subscribe(
+        {
+          next: data => { this.user = data; this.loggedin = true; this.error = ''; console.log(data) },
+          error: err => { this.error = err.error; console.log(err.error) }
+        })
+    }
+    else { this.error = 'missing fileds' }
+  }
+
+
+  SignUp = (user: User) => {
+    console.log(user)
+    if (user.username !== '' && user.email !== '' && user.password !== '') {
+      this.auth.signUp(user.email, user.password, user.username).subscribe({
+        next: data => { this.user = data; this.loggedin = true; this.error = ''; console.log(data) },
+        error: err => { this.error = err.error; console.log(err.error) }
+      })
+    }
+    else { this.error = 'missing fileds' }
+  }
+
+
   constructor(public dialog: MatDialog, private movie: DataService, private auth: AuthService) { }
-  openDialog(): void {
+  navOpen():void {
     const dialogRef = this.dialog.open(AuthPopupComponent, {
       width: '420px',
       height: '500px',
-      disableClose: true,
+      disableClose: false,
+      data: { signin: this.SignIn, signup: this.SignUp }
     });
+
 
     dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
-      this.user = result
-      if (this.user.username !== '' && this.user.email !== '' && this.user.password !== '') {
-        this.auth.signUp(this.user.email, this.user.password, this.user.username).subscribe({
-          next: data => { this.user = data; this.loggedin = true;console.log(data) },
-          error: err => {this.error = err.error ; console.log(err.error)}
-        })
-      }
-      else if (this.user.username == '' && this.user.email !== '' && this.user.password !== '') {
-        this.auth.signIn(this.user.email, this.user.password).subscribe(
-          {
-            next: data => { this.user = data; this.loggedin = true; console.log(data)},
-            error: err => {this.error = err.error ; console.log(err.error)}
-          })
-
-
-
-      }
-      else {
-        this.error = 'missing data'
-      }
-
-
+      console.log('The dialog was closed')
     });
   }
+
+  // openDialog() {
+  //   const dialogRef = this.dialog.open(AuthPopupComponent, {
+  //     width: '420px',
+  //     height: '500px',
+  //     disableClose: false,
+  //     data:{signin:this.SignIn , signup:this.SignUp}
+  //   });
+
+
+  //   dialogRef.afterClosed().subscribe(result => {
+  //     console.log('The dialog was closed')
+  //   });
+  // }
 
   ngOnInit(): void {
     this.moviesget.push(this.movie.getConfig().subscribe(data => this.movies = data))
 
   }
+
+
 }
 
