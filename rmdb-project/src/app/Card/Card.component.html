@@ -1,5 +1,48 @@
-<div class="d-inline-flex p-2">
+<div>
   <div class="movie-container">
+    <h2>Popular</h2>
+    <div class="image-container d-flex justify-content-center">
+      <!-- <h2>Popular</h2> -->
+      <div class="d-flex align-items-center">
+        <div *ngFor="let film of movies" ngbSlide>
+          <img src="{{ film.poster }}" alt="{{ film.title }}" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+  <div class="movie-container">
+    <h2>Comedy</h2>
+
+    <div class="image-container d-flex justify-content-center">
+      <!-- <h2>Popular</h2> -->
+      <div class="d-flex align-items-center">
+        <div *ngFor="let film of movies" ngbSlide>
+          <img src="{{ film.poster }}" alt="{{ film.title }}" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+  <div class="movie-container">
+    <h2>Action</h2>
+
+    <div class="image-container d-flex justify-content-center">
+      <!-- <h2>Popular</h2> -->
+      <div class="d-flex align-items-center">
+        <div *ngFor="let film of movies" ngbSlide>
+          <img src="{{ film.poster }}" alt="{{ film.title }}" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+  <div class="movie-container">
+    <h2>Drama</h2>
+
     <div class="image-container d-flex justify-content-center">
       <!-- <h2>Popular</h2> -->
       <div class="d-flex align-items-center">
