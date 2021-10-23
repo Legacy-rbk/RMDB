@@ -96,20 +96,18 @@ app.post('/signup', (req, res) => {
   User.find({ email: req.body.email })
     .then((user) => {
       if (!user.length) {
-        if(req.body.password.length >7){
           crypt.Hash(req.body.password)
           .then((passwordHashed) => {
             User.create({ email: req.body.email, username: req.body.username, password: passwordHashed })
               .then((data) => { res.status(201).send(data); })
               .catch((err) => { res.send(err); });
           });
-        }else{res.status(403).send('password should be 8 caracters or more !')}
-        
       } else {
         res.status(403).send('user already exist');
       }
 
-    });
+    })
+    .catch((err)=>res.status(403).send(err))
 });
 
 app.get('/api/pop', function (req, res) {

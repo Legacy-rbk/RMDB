@@ -14,6 +14,10 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {NgbPaginationModule, NgbAlertModule} from '@ng-bootstrap/ng-bootstrap';
 import {SlickCarouselModule} from 'ngx-slick-carousel';
 import { HttpClientModule } from '@angular/common/http';
+
+
+
+
 import { SecondNavComponent } from './Second-Nav/Second-Nav.component';
 import {SearchComponent} from './Search/Search.component';
 // import { NgbdCarouselConfig } from './carousel-config';
@@ -50,7 +54,10 @@ import {searchModule} from './search/search.module';
     searchModule,
 
   ],
-  providers: [{provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: {hasBackdrop: false}}],
+  providers: [{provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: {hasBackdrop: true}}],
+  entryComponents: [
+    AuthPopupComponent
+  ],
   bootstrap: [AppComponent]
  
 })
