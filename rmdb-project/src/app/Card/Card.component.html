@@ -1,24 +1,58 @@
-<ngb-carousel>
-  <ng-template ngbSlide>
-    <div class="movie">
-      <div class="movie__images" style="margin-top: 8rem">
-        <h2>Popular</h2>
-        <div class="thumbnails">
-          <ngx-slick-carousel [config]="sliderConfig" class="carousel">
-            <div class="slick-item" *ngFor="let film of movies" ngbSlide>
-              <img
-                class="imgg"
-                src="{{ film.poster }}"
-                alt="{{ film.title }}"
-              />
-            </div>
-            <div class="carousel-caption"></div>
-          </ngx-slick-carousel>
+<div>
+  <div class="movie-container">
+    <h2>Popular</h2>
+    <div class="image-container d-flex justify-content-center">
+      <!-- <h2>Popular</h2> -->
+      <div class="d-flex align-items-center">
+        <div *ngFor="let film of movies" ngbSlide>
+          <img src="{{ film.poster }}" alt="{{ film.title }}" />
         </div>
       </div>
     </div>
-  </ng-template>
-</ngb-carousel>
+  </div>
+</div>
+<div>
+  <div class="movie-container">
+    <h2>Comedy</h2>
+
+    <div class="image-container d-flex justify-content-center">
+      <!-- <h2>Popular</h2> -->
+      <div class="d-flex align-items-center">
+        <div *ngFor="let film of movies" ngbSlide>
+          <img src="{{ film.poster }}" alt="{{ film.title }}" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+  <div class="movie-container">
+    <h2>Action</h2>
+
+    <div class="image-container d-flex justify-content-center">
+      <!-- <h2>Popular</h2> -->
+      <div class="d-flex align-items-center">
+        <div *ngFor="let film of movies" ngbSlide>
+          <img src="{{ film.poster }}" alt="{{ film.title }}" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+  <div class="movie-container">
+    <h2>Drama</h2>
+
+    <div class="image-container d-flex justify-content-center">
+      <!-- <h2>Popular</h2> -->
+      <div class="d-flex align-items-center">
+        <div *ngFor="let film of movies" ngbSlide>
+          <img src="{{ film.poster }}" alt="{{ film.title }}" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- <div class="overlay">
             <svg

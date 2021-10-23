@@ -1,5 +1,5 @@
-import { Component, OnInit, ViewEncapsulation, Inject, Output, EventEmitter } from '@angular/core';
-import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { Component, OnInit, ViewEncapsulation, Inject} from '@angular/core';
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA  } from '@angular/material/dialog';
 
 import { User } from '../User'
 
@@ -11,22 +11,21 @@ import { User } from '../User'
 })
 export class AuthPopupComponent implements OnInit {
 
-  @Output() signInData:EventEmitter<User>=new EventEmitter();
+ 
 
   constructor(
     public dialogRef: MatDialogRef<AuthPopupComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: '') { }
+    @Inject(MAT_DIALOG_DATA) public data: any) { }
 
   sign: Boolean = false;
 
 
   user: User = {
-    _id:'',
     email: '',
     username: '',
     password: ''
   };
-
+ 
   switch(): void {
     this.sign = !this.sign
   }

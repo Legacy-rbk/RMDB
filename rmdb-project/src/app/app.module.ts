@@ -17,6 +17,11 @@ import {NgbPaginationModule, NgbAlertModule} from '@ng-bootstrap/ng-bootstrap';
 import {SlickCarouselModule} from 'ngx-slick-carousel';
 import { HttpClientModule } from '@angular/common/http';
 
+
+
+
+import { SecondNavComponent } from './Second-Nav/Second-Nav.component';
+
 // import { NgbdCarouselConfig } from './carousel-config';
 import { CardComponent } from './Card/Card.component';
 @NgModule({
@@ -25,8 +30,8 @@ import { CardComponent } from './Card/Card.component';
       FirstNavComponent,
       SliderShowComponent,
       AuthPopupComponent,
-   
-      CardComponent
+      CardComponent,
+      SecondNavComponent
    ],
   imports: [
     BrowserModule,
@@ -42,7 +47,10 @@ import { CardComponent } from './Card/Card.component';
     HttpClientModule,
     SlickCarouselModule
   ],
-  providers: [{provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: {hasBackdrop: false}}],
+  providers: [{provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: {hasBackdrop: true}}],
+  entryComponents: [
+    AuthPopupComponent
+  ],
   bootstrap: [AppComponent]
  
 })
