@@ -47,7 +47,10 @@ import { CardComponent } from './Card/Card.component';
     HttpClientModule,
     SlickCarouselModule
   ],
-  providers: [{provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: {hasBackdrop: false}}],
+  providers: [{provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: {hasBackdrop: true}}],
+  entryComponents: [
+    AuthPopupComponent
+  ],
   bootstrap: [AppComponent]
  
 })
