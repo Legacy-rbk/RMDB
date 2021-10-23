@@ -1,51 +1,53 @@
 
 
 .listing {
-  margin : 2.5rem 1.5rem;
+  margin: 2.5rem 1.5rem;
+  height : 350px;
+   width: 99%;
+  
+
+  }
+  .listing__items{
+  
+    height : 250px;
+       width:200%; 
+   display: flex;
+   flex-direction : row;
+  position : absolute ;
+  animation : 10s slider infinite ;
   overflow-y : hidden ;
-  overflow-x : scroll;
-  display : flex ;
-  flex-direction : flex-start;
-}
-
-.listing__head {
-  display: flex;
-  align-items: baseline;
-  margin-bottom: 1.5rem;
-  @media (min-width: $breakpoint-large) {
-    margin-bottom: 2rem;
+  overflow-x : scroll ;
+  
   }
-}
 
-.listing__title {
-  font-size: 1.8rem;
-  letter-spacing: $letter-spacing;
-
-  @media (min-width: $breakpoint-large) {
-    font-size: 2.4rem;
+  
+  .listing-item-style {
+    background-color: #212121;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+    border-radius: 5px;
+    margin: 11px 5px 11px;
+    position: relative;
+    cursor: pointer;
+    height : 250px;
+    width:100%; 
+    object-fit: cover;
+    &:focus {
+      outline-style: none;
+    }
   }
-}
-
-
-.listing-item-style {
-  background-color: #212121;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  color: $base-font-color;
-  border-radius: 5px;
-  margin: 11px 5px 11px;
-  position: relative;
-  cursor: pointer;
-
-}
-
-
-.imgg{
-
-  width: 100%;
+  
+    img {
+      width: 100%;
       transition: all .5s ease-out;
-      border-top-left-radius: 5px;
-      border-top-right-radius: 5px;
-}
+     
+    }
+
+  
+      .material-icons {
+        color: white;
+      }
+
 
 .listing-item-style:hover .overlay {
   opacity: 1;
@@ -122,7 +124,7 @@ cursor: pointer;
 
 
 
-/* .overlay {
+.overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -147,7 +149,7 @@ cursor: pointer;
 .overlay:hover > * {
   transform: translateY(0);
 }
-.title {
+/* .title {
 
   font-size: 2em;
   font-weight: bold;
@@ -155,6 +157,6 @@ cursor: pointer;
 .description {
   font-size: 1.25em;
   margin-top: 0.5em;
-} */
+}  */
 
 
