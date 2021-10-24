@@ -1,10 +1,14 @@
 <div>
   <div class="movie-container">
-    <h2>Popular</h2>
+    <h2>Action</h2>
     <div class="image-container d-flex justify-content-center">
       <div class="d-flex align-items-center">
-        <div *ngFor="let film of movies" ngbSlide>
-          <img src="{{ film.poster }}" alt="{{ film.title }}" />
+        <div *ngFor="let film of action">
+          <img
+            (click)="MoviePopUp(film)"
+            src="{{ film.poster }}"
+            alt="{{ film.title }}"
+          />
         </div>
       </div>
     </div>
@@ -16,7 +20,7 @@
 
     <div class="image-container d-flex justify-content-center">
       <div class="d-flex align-items-center">
-        <div *ngFor="let film of movies" ngbSlide>
+        <div *ngFor="let film of comedy">
           <img src="{{ film.poster }}" alt="{{ film.title }}" />
         </div>
       </div>
@@ -25,11 +29,11 @@
 </div>
 <div>
   <div class="movie-container">
-    <h2>Action</h2>
+    <h2>Family</h2>
 
     <div class="image-container d-flex justify-content-center">
       <div class="d-flex align-items-center">
-        <div *ngFor="let film of movies" ngbSlide>
+        <div *ngFor="let film of family">
           <img src="{{ film.poster }}" alt="{{ film.title }}" />
         </div>
       </div>
@@ -42,7 +46,21 @@
 
     <div class="image-container d-flex justify-content-center">
       <div class="d-flex align-items-center">
-        <div *ngFor="let film of movies" ngbSlide>
+        <div *ngFor="let film of drama">
+          <img src="{{ film.poster }}" alt="{{ film.title }}" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div>
+  <div class="movie-container">
+    <h2>Crime</h2>
+
+    <div class="image-container d-flex justify-content-center">
+      <div class="d-flex align-items-center">
+        <div *ngFor="let film of crime">
           <img src="{{ film.poster }}" alt="{{ film.title }}" />
         </div>
       </div>
