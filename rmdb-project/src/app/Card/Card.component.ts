@@ -15,6 +15,8 @@ export class CardComponent implements OnInit {
 @Input()  family:Movie;
 @Input()  comedy:Movie;
 @Input()  crime:Movie;
+@Input()  loggedin:boolean ;
+
   constructor() { }
 
   ngOnInit() {

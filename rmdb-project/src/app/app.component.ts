@@ -32,6 +32,8 @@ export class AppComponent {
   user: User;
   loggedin: boolean = false;
   error: string;
+  toWatchList : any[] ;
+
   sliderConfig = {
     slidesToShow: 4,
     slidesToScroll: 2,
