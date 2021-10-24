@@ -20,7 +20,7 @@
      
         <div class="cards" *ngFor="let film of action">
           <img
-             
+          (click)="MoviePopUp(film)"
             src="{{ film.poster }}"
             alt="{{ film.title }}"
           />
