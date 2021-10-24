@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {FormControl} from '@angular/forms';
 import {Observable} from 'rxjs';
-import {map, startWith} from 'rxjs/operators';
+import {map, debounceTime} from 'rxjs/operators';
 
 
 @Component({
@@ -11,13 +11,13 @@ import {map, startWith} from 'rxjs/operators';
 })
 export class SearchComponent implements OnInit {
   myControl = new FormControl();
-  options: string[] = ['hardcode'];
+  options: string[] = ['one','two','hnh','jnjin','okok','ipjip'];
   filteredOptions: Observable<string[]>;
 
   ngOnInit() {
     this.filteredOptions = this.myControl.valueChanges
-      .pipe(
-        startWith(''),
+      .pipe(        
+        debounceTime(500),
         map(value => this._filter(value))
       );
   }

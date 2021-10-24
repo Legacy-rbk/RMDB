@@ -13,10 +13,25 @@
   overflow-y : hidden ;
   overflow-x : auto;
   white-space: nowrap;
-}
+  width:1490px;
+  scrollbar-width: none;
 
+}
+.cont{
+  padding: 2rem 2rem; 
+	border-radius: 5px;
+	box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25);
+	margin-bottom: 1rem;
+	background-color: #262626;
+	margin-right: -220rem;
+	margin-left: 1rem;
+  overflow-y : hidden ;
+  overflow-x : auto;
+  white-space: nowrap;
+}
 .image-container {
   -webkit-overflow-scrolling: touch;
+  width:200px;
 }
 
 img {
