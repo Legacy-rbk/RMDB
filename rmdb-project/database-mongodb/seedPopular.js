@@ -2,6 +2,130 @@ const db = require("./index.js");
 const Popular = require("./popular.js");
 const best = [
   {
+    title: " Choufli 7al ",
+    year: "2018",
+    release_date: "2023-07-14",
+    imdb_id: "tt11779248",
+    imdb_rating: "7.6",
+    poster: "https://images.moviefit.me/t/o/275123-choufli-hal.jpg",
+    vote_count: "0",
+    popularity: "3.429",
+    youtube_trailer_key: "88GFHzLr65s",
+    rated: "PG-13",
+    genres: ["Fantasy", "Family"],
+    stars: ["Dennis Quaid", "Meagan Good", "Michael Ealy"],
+    directors: ["Guy Ritchie"],
+    countries: ["United States of America"],
+    description:
+      "Choufli Hal (arabe : شوفلي حل), littéralement Trouve-moi une solution, est une série télévisée humoristique tunisienne, en arabe tunisien en 135 épisodes de 40 minutes, diffusée du 4 octobre 2005 au 19 septembre 2009 sur Tunisie 7 durant le mois de ramadan1.",
+    language: ["English"],
+    comments: [""],
+  },
+  {
+    title: "El foundou ",
+    year: "2018",
+    release_date: "2023-07-14",
+    imdb_id: "tt11779248",
+    imdb_rating: "7.6",
+    poster:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXm45uPeDyYQPvuUgHDEtXCcMdiv7p3v5_R5FqDoO4O1HsYdsdpeZN9o5jMPBgyhlAZDk&usqp=CAU",
+    vote_count: "0",
+    popularity: "3.429",
+    youtube_trailer_key: "6cDsUzbTFCo",
+    rated: "PG-13",
+    genres: ["Fantasy", "Action"],
+    stars: ["Dennis Quaid", "Meagan Good", "Michael Ealy"],
+    directors: ["Guy Ritchie"],
+    countries: ["United States of America"],
+    description:
+      "Tunisia Series full of action and drama written by Mohamed Elyes ben khoud the big actor",
+    language: ["English"],
+    comments: [""],
+  },
+  {
+    title: "Cloudy with a Chance of Meatballs ",
+    year: "2018",
+    release_date: "2023-07-14",
+    imdb_id: "tt11779248",
+    imdb_rating: "7.6",
+    poster: "https://m.media-amazon.com/images/I/81MvVWP9jBL._AC_SL1500_.jpg",
+    vote_count: "0",
+    popularity: "3.429",
+    youtube_trailer_key: "pUaKcFI4BZY",
+    rated: "PG-13",
+    genres: ["Fantasy", "Family"],
+    stars: ["Dennis Quaid", "Meagan Good", "Michael Ealy"],
+    directors: ["Guy Ritchie"],
+    countries: ["United States of America"],
+    description:
+      "Cloudy with a Chance of Meatballs is an animated fantasy loosely based on the 1978 book of the same name. It tells the story of Flint Lockwood (voiced by Bill Hader), a young scientist trying to create the ultimate invention.",
+    language: ["English"],
+    comments: [""],
+  },
+  {
+    title: "We Can Be Heroes ",
+    year: "2018",
+    release_date: "2023-07-14",
+    imdb_id: "tt11779248",
+    imdb_rating: "7.6",
+    poster:
+      "https://upload.wikimedia.org/wikipedia/en/8/8b/We_Can_Be_Heroes_2020_film_poster.png",
+    vote_count: "0",
+    popularity: "3.429",
+    youtube_trailer_key: "g9O2YTtdaZA",
+    rated: "PG-13",
+    genres: ["Fantasy", "Family"],
+    stars: ["Dennis Quaid", "Meagan Good", "Michael Ealy"],
+    directors: ["Guy Ritchie"],
+    countries: ["United States of America"],
+    description:
+      "When alien invaders capture the Earth's superheroes, their kids must learn to work together to save their parents- and the planet. When alien invaders capture the Earth's superheroes, their kids must learn to work together to save their parents- and the planet.",
+    language: ["English"],
+    comments: [""],
+  },
+  {
+    title: "Marmaduke ",
+    year: "2018",
+    release_date: "2023-07-14",
+    imdb_id: "tt11779248",
+    imdb_rating: "7.6",
+    poster:
+      "https://s3.amazonaws.com/static.rogerebert.com/uploads/movie/movie_poster/marmaduke-2010/large_rjrOVa3zpRpMRvyoBl6G5j28pq.jpg",
+    vote_count: "0",
+    popularity: "3.429",
+    youtube_trailer_key: "xGx6IhjoWqw",
+    rated: "PG-13",
+    genres: ["Fantasy", "Family"],
+    stars: ["Dennis Quaid", "Meagan Good", "Michael Ealy"],
+    directors: ["Guy Ritchie"],
+    countries: ["United States of America"],
+    description:
+      "Marmaduke is a huge, obliviously reckless, dopey Great Dane who loves his owner Phil. Having left his home in Kansas to move to California, he is forced to adjust to his new surroundings.",
+    language: ["English"],
+    comments: [""],
+  },
+  {
+    title: "Nanny McPhee and the Big Bang",
+    year: "2019",
+    release_date: "2023-07-14",
+    imdb_id: "tt11779248",
+    imdb_rating: "7.6",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BMTI5NDUxNDU4OF5BMl5BanBnXkFtZTcwNDk1NjM1Mw@@._V1_.jpg",
+    vote_count: "0",
+    popularity: "3.429",
+    youtube_trailer_key: "54xMw6eouOM",
+    rated: "PG-13",
+    genres: ["Fantasy", "Family"],
+    stars: ["Dennis Quaid", "Meagan Good", "Michael Ealy"],
+    directors: ["Guy Ritchie"],
+    countries: ["United States of America"],
+    description:
+      "Nanny McPhee & The Big Bang is set against a backdrop of English pastoral bliss, with hard-working Mrs Green (Gyllenhaal) struggling to cope with her three young children while her husband is away at war.",
+    language: ["English"],
+    comments: [""],
+  },
+  {
     title: "Aladdin",
     year: "2019",
     release_date: "2023-07-14",
@@ -17,7 +141,10 @@ const best = [
     stars: ["Dennis Quaid", "Meagan Good", "Michael Ealy"],
     directors: ["Guy Ritchie"],
     countries: ["United States of America"],
+    description:
+      "Aladdin, a street urchin in the Arabian city of Agrabah, and his monkey Abu meet Princess Jasmine, who has snuck away from her sheltered life in the palace. Jasmine wishes to succeed her father as Sultan, but is instead expected to marry one of her royal suitors, including the charming yet dimwitted Prince Anders.",
     language: ["English"],
+    comments: [""],
   },
   {
     title: "Bad Blood",
@@ -30,11 +157,14 @@ const best = [
     vote_count: "90",
     popularity: "7.913",
     youtube_trailer_key: "8JbZKsfgXq0",
-    genres: ["Drama", "Crime"],
+    genres: ["Crime"],
     stars: ["Jennifer Lawrence", "Mike Gassaway"],
     directors: ["Adam McKay"],
     countries: ["Germany", "Italy"],
+    description:
+      "A classic werewolf flick with an amphibious twist; it's a race against time to find the antidote. A classic werewolf flick with an amphibious twist; it's a race against time to find the antidote. A classic werewolf flick with an amphibious twist; it's a race against time to find the antidote.",
     language: ["English"],
+    comments: [""],
   },
   {
     title: "Jurassic World: Dominion",
@@ -64,7 +194,10 @@ const best = [
     ],
     directors: ["Colin Trevorrow"],
     countries: ["United States of America"],
+    description:
+      "A new theme park, built on the original site of Jurassic Park, creates a genetically modified hybrid dinosaur, the Indominus Rex, which escapes containment and goes on a killing spree. Twenty-two years after the original Jurassic Park failed, the new park, also known as Jurassic World, is open for business.",
     language: ["English"],
+    comments: [""],
   },
   {
     title: "The Bad Guys",
@@ -88,7 +221,10 @@ const best = [
       "2 more credits",
     ],
     countries: ["United States of America"],
+    description:
+      "An unfeeling gangster seeks to ruin the life of a young girl who rejected him. He forces her into prostitution and spies on her regularly, then he soon begins to fall for her.An unfeeling gangster seeks to ruin the life of a young girl who rejected him.",
     language: ["English"],
+    comments: [""],
   },
   {
     title: "Last Looks",
@@ -116,7 +252,10 @@ const best = [
     ],
     directors: ["Tim Kirkby"],
     countries: ["United States of America"],
+    description:
+      "A disgraced ex-cop seeks solace by moving to the woods, but his quiet life comes to an end when a private eye recruits him to investigate a murder. A disgraced ex-cop seeks solace by moving to the woods, but his quiet life comes to an end when a private eye recruits him to investigate a murder. ",
     language: ["English"],
+    comments: [""],
   },
   {
     title: "Sherlock Holmes 3",
@@ -139,6 +278,7 @@ const best = [
     directors: ["Dexter Fletcher"],
     countries: ["United States of America"],
     language: ["English"],
+    comments: [""],
   },
   {
     title: "Submission",
@@ -171,7 +311,10 @@ const best = [
     ],
     directors: ["J.M. Berrios"],
     countries: ["United States of America", "USA"],
+    description:
+      "A cynical college professor takes a keen interest in a talented young writing student. A cynical college professor takes a keen interest in a talented young writing student. A cynical college professor takes a keen interest in a talented young writing student.",
     language: ["English", "en"],
+    comments: [""],
   },
   {
     title: "The Nightingale",
@@ -186,7 +329,10 @@ const best = [
     stars: ["Elle Fanning", "Dakota Fanning"],
     directors: ["Mélanie Laurent", "Michelle MacLaren"],
     countries: ["United States of America", "USA"],
+    description:
+      "The Nightingale is a 2018 Australian drama film written, directed, and co-produced by Jennifer Kent. Set in 1825 in the penal colony of Van Diemen's Land (present-day Tasmania), the film follows a young female convict seeking revenge for a terrible act of violence committed against her family.",
     language: ["English", "N/A"],
+    comments: [""],
   },
   {
     title: "Kung Fury",
@@ -220,7 +366,10 @@ const best = [
     ],
     directors: ["David Sandberg"],
     countries: ["Sweden", "United States of America"],
+    description:
+      "In 1985, Kung Fury, the toughest martial artist cop in Miami, goes back in time to kill the worst criminal of all time - Kung Führer, a.k.a. Adolf Hitler. ... Kung Fury decides to travel back in time, to Nazi Germany, in order to kill Hitler and end the Nazi empire once and for all.",
     language: ["English", "Deutsch", "svenska", "English, German, Swedish"],
+    comments: [""],
   },
   {
     title: "A Mother's Crime",
@@ -246,7 +395,10 @@ const best = [
     ],
     directors: ["Farhad Mann", "Lora Martinez-Cunningham", "Amber LeRae Earls"],
     countries: ["United States of America", "USA"],
+    description:
+      "Found guilty of murder, a woman is forced to give custody of her infant daughter to her biggest rival, her own sister. Now, released from prison, she'll stop at nothing to get her daughter back.",
     language: ["English"],
+    comments: [""],
   },
   {
     title: "The Intruder",
@@ -284,6 +436,7 @@ const best = [
     description:
       "When a young married couple (Michael Ealy and Meagan Good) buys their dream house in the Napa Valley, they think they have found the perfect home to take their next steps as a family. But when the strangely attached seller (Dennis Quaid) continues to infiltrate their lives, they begin to suspect that he has hidden motivations beyond a quick sale.",
     language: ["English", "en"],
+    comments: [""],
   },
   {
     title: "A Quiet Life",
@@ -334,6 +487,7 @@ const best = [
       "Italiano",
       "Italian, German, Neapolitan, English",
     ],
+    comments: [""],
   },
 
   {
@@ -367,6 +521,7 @@ const best = [
     description:
       " After We Collided is a 2020 American romantic drama film directed by Roger Kumble and written by Anna Todd and Mario Celaya. It is based on the 2014 new adult fiction novel of the same name by Todd, and is the sequel to After (2019). The film stars Josephine Langford and Hero Fiennes Tiffin as Tessa Young and Hardin Scott, respectively, with Dylan Sprouse, Shane Paul McGhie, Candice King, Khadijha Red Thunder, Inanna Sarkis, Samuel Larsen, and Selma Blair in supporting roles.",
     language: ["Français", "French"],
+    comments: [""],
   },
   {
     title: "The Three Wise Men",
@@ -386,6 +541,7 @@ const best = [
     description:
       "Narrated by the legendary Andy Griffith (THE ANDY GRIFFITH SHOW, MATLOCK), this heartwarming animated special is a charming re-imagination of the classic Christmas story following the three wise men on a wondrous quest to meet the newborn king. Their journey is told through rhymed narration alongside a soundtrack of holiday carols performed by The Brothers Cazimero from Hawaii and the new original song Noel by the Grammy Award-winning songwriter Jonas Myrin.",
     language: ["English", "en"],
+    comments: [""],
   },
   {
     title: "People You May Know",
@@ -432,6 +588,7 @@ const best = [
     description:
       "Joe, Delia, Rodrigo, and Herbert are very close friends in their mid 30’s. Delia and Rodrigo are married, while Joe is Delia’s ex-boyfriend who turned out to be gay. After a night of drinking, Joe and Delia sleep together and she gets pregnant. Meanwhile, Joe is in a secret online relationship with Tom. They have not met in person yet... and they never will.",
     language: ["English"],
+    comments: [""],
   },
   {
     title: "Blood Moon River",
@@ -468,6 +625,7 @@ const best = [
     description:
       "A group of friends try to debunk a local legend, but have they bitten off more than they can chew?",
     language: ["English", "en"],
+    comments: [""],
   },
   {
     title: "Submission",
@@ -503,6 +661,7 @@ const best = [
     description:
       "A cynical college professor takes a keen interest in a talented young writing student.",
     language: ["English", "en"],
+    comments: [""],
   },
   {
     title: "Soldier of Fortune",
@@ -531,6 +690,7 @@ const best = [
     description:
       "IN THEATERS & ON DEMAND AUGUST 3rd! A former US special forces soldier is reluctantly appointed to protect a group of millionaires who want to experience the thrills of war first-hand. But when their excursion goes horribly awry, the unlikely team must band together in order to get out alive. Starring Christian Slater, Ving Rhames, Dominic Monaghan, Sean Bean and James Cromwell.",
     language: ["English", "en"],
+    comments: [""],
   },
   {
     title: "Red Sun",
@@ -567,6 +727,7 @@ const best = [
     description:
       "The story takes place in Arizona, around 1870. Link and Gotch are two ruthless robbers that attack along with their men at the train which carries the ambassador of Japan over to Washington. During the robbery, Gotch takes a very valuable gold sword, which is a gift from the emperor to the president of the U.S. and tries to kill Link, so that he can take all the money for himself.",
     language: ["Español", "English", "日本語", "English, Spanish, Japanese"],
+    comments: [""],
   },
   {
     title: "A Mother's Crime",
@@ -595,6 +756,7 @@ const best = [
     description:
       "Encouraged by her lover, Danielle kills her husband and goes on the lam with her infant daughter Cali. But the cops catch her and, en route to prison, she agrees to give custody of Cali to her arch rival, her sister Nikki. But on release from prison, Danielle will stop at nothing to get Cali back from Nikki's safe and healthy home.",
     language: ["English"],
+    comments: [""],
   },
   {
     title: "Tarung Sarung",
@@ -621,7 +783,10 @@ const best = [
     ],
     directors: ["Archie Hekagery"],
     countries: ["Indonesia"],
+    description:
+      "Wealthy and spoiled, a young man finds something to fight for when he falls in love with an environment activist protesting his family's business. Wealthy and spoiled, a young man finds something to fight for when he falls in love with an environment activist protesting his family's business.",
     language: ["Bahasa indonesia"],
+    comments: [""],
   },
   {
     title: "Harry and Walter Go to New York",
@@ -648,7 +813,10 @@ const best = [
     ],
     directors: ["Mark Rydell"],
     countries: ["United States of America"],
+    description:
+      "In the film, two down-on-their-luck con men try to pull off the biggest heist ever seen in late nineteenth-century New York City. They are opposed by the greatest bank robber of the day, and by a crusading newspaper editor.",
     language: ["Español", "Deutsch", "English"],
+    comments: [""],
   },
   {
     title: "Harry and Walter Go to New York",
@@ -675,7 +843,11 @@ const best = [
     ],
     directors: ["Leszek Burzynski"],
     countries: ["United States of America"],
+    description:
+      "In the film, two down-on-their-luck con men try to pull off the biggest heist ever seen in late nineteenth-century New York City. They are opposed by the greatest bank robber of the day, and by a crusading newspaper editor.",
+
     language: ["English"],
+    comments: [""],
   },
   {
     title: "Shopping",
@@ -702,7 +874,10 @@ const best = [
     ],
     directors: ["Paul W. S. Anderson"],
     countries: ["United Kingdom", "UK, Japan"],
+    description:
+      "Shopping is a 2013 New Zealand coming-of-age film written and directed by Mark Albiston and Louis Sutherland. It stars Kevin Paulo as a mixed race Samoan New Zealander who falls in with a group of shoplifters led by an Eastern-European immigrant played by Jacek Koman.",
     language: ["English"],
+    comments: [""],
   },
   {
     title: "Robot & Frank",
@@ -729,7 +904,10 @@ const best = [
     ],
     directors: ["Jake Schreier"],
     countries: ["United States of America"],
+    description:
+      "A retired burglar and a household appliance. Robot & Frank tells the story of relationship between a retired burglar and a household appliance more relentless than an alarm clock. Frank is a man who lives alone in a bucolic house in upstate New York and is somewhere along the slope into dementia.",
     language: ["English"],
+    comments: [""],
   },
   {
     title: "Koch Brothers Exposed",
@@ -756,7 +934,10 @@ const best = [
     ],
     directors: ["Robert Greenwald"],
     countries: ["United States of America"],
+    description:
+      "Koch Brothers Exposed is a 2012 U.S. documentary, compiled by liberal political activist and filmmaker Robert Greenwald from a viral video campaign produced by Brave New Films, about the alleged political activities of the Koch brothers.",
     language: ["English"],
+    comments: [""],
   },
   {
     title: "L.A. Superheroes",
@@ -781,6 +962,7 @@ const best = [
     directors: ["Yelena Popovic", "Alexandros Potter"],
     countries: ["United States of America"],
     language: ["English"],
+    comments: [""],
   },
   {
     title: "Uninhabited",
@@ -803,7 +985,10 @@ const best = [
     ],
     directors: ["Bill Bennett"],
     countries: ["Australia"],
+    description:
+      "A young couple go to a remote and deserted coral island for a camping holiday, only to find that the island is inhabited by a ghost seeking retribution for a past outrage.",
     language: ["English", "Deutsch"],
+    comments: [""],
   },
   {
     title: "Alpha Dog",
@@ -830,7 +1015,10 @@ const best = [
     ],
     directors: ["Nick Cassavetes", "Jeanne Byrd"],
     countries: ["United States of America", "Germany"],
+    description:
+      "Alpha Dog is a 2006 American crime drama film written and directed by Nick Cassavetes based on the true story of the kidnapping and murder of Nicholas Markowitz in 2000. It was first screened at the Sundance Film Festival on January 27, 2006, with a wide release the following year on January 12, 2007.",
     language: ["English", "Český", "Español"],
+    comments: [""],
   },
   {
     title: "My Friend, Tucker",
@@ -846,7 +1034,10 @@ const best = [
     stars: ["Avery Anthony", "Mitchell Edwards"],
     directors: ["Clarence Williams IV"],
     countries: ["United States of America"],
+    description:
+      "A troubled young man named Hamilton returns home for the first time in years since leaving for college and reconnects with his childhood best friend, Tucker. The two reflect on life, love, adulthood, and the ups and downs of childhood.",
     language: ["English"],
+    comments: [""],
   },
 ];
 const insertBest = function () {

@@ -4,8 +4,6 @@
   flex-direction: column;
  max-width:100%;
  padding: 0px;
- 
-//  margin-left:-0.8%;
   .header {
     width:100%;
     display: flex;
@@ -93,7 +91,7 @@
     justify-content: space-between;
     z-index: 10;
     position: fixed;
-    top:0;
+    margin-top:0px;
     transition: all 0.3s;
     transition-timing-function: ease-in;
     background: linear-gradient(to bottom, #000, #0003 88%,#0000); /* background when scroll is in the top */
@@ -111,7 +109,7 @@
     display: flex;
     align-items: center;
     gap: 50px;
-    
+    margin-top:-5%;
    
     img {
       margin-left: 40px;
@@ -140,6 +138,8 @@
     display: flex;
     align-items: center;
     gap: 30px;
+    margin-top:-5%;
+
 
     li a {
       color: rgb(219, 213, 213);
@@ -205,6 +205,12 @@ ul {
     }
   }
 }
+
+
+
 .logo { 
-    height:67px;
+    height:43px  !important;
+   margin-top: -5px !important;
+   margin-right:40px !important;
+
 }

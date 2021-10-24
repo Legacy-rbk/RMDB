@@ -1,42 +1,55 @@
 
 <div class="navbar">
-  <div class="header__main" id="stickyHeader" [class.sticky]="sticky" #stickHeader>
-    
+  <div
+    class="header__main"
+    id="stickyHeader"
+    [class.sticky]="sticky"
+    #stickHeader
+  >
     <div class="header__left">
-
       <ul>
         <li class="active">
-          <div class="logo">
-           <img (click)=refresh() src="../../assets/signage.png">
+          <div>
+            <img
+              class="logo"
+              (click)="refresh()"
+              src="../../assets/signage.png"
+            />
           </div>
         </li>
       </ul>
-
     </div>
-
 
     <div class="header__right">
       <ul>
-
         <li>
-          <input />
+        <app-search></app-search>
         </li>
-        <li><a href="#">
+        <li>
+          <a href="#">
             <mat-icon>search</mat-icon>
-          </a></li>
+          </a>
+        </li>
 
         <li class="active"><a href="#">Home</a></li>
-        <li><a href="#">Categories</a></li>
+        <li>
+          <div ngbDropdown>
+            <a ngbDropdownToggle> Categories </a>
+            <div class="opacity" ngbDropdownMenu>
+              <button ngbDropdownItem>Action</button>
+              <button ngbDropdownItem>Drama</button>
+              <button ngbDropdownItem>Comedy</button>
+              <button ngbDropdownItem>Family</button>
+              <button ngbDropdownItem>Crime</button>
+            </div>
+          </div>
+        </li>
 
-        <li><a href="#">
-            <mat-icon>login</mat-icon>
-          </a></li>
-
+        <li>
+          
+          <mat-icon fas icon="user-circle" (click)="logPopUp()">login</mat-icon>
+        </li>
       </ul>
     </div>
   </div>
-
-
-
-
 </div>

@@ -1,44 +1,122 @@
-<ngb-carousel>
-  <ng-template ngbSlide>
-    <div class="movie">
-      <div class="movie__images" style="margin-top: 8rem">
-        <h2>Popular</h2>
-        <div class="thumbnails">
-          <ngx-slick-carousel [config]="sliderConfig" class="carousel">
-            <div class="slick-item" *ngFor="let film of movies" ngbSlide>
-              <img
-                class="imgg"
-                src="{{ film.poster }}"
-                alt="{{ film.title }}"
-              />
-            </div>
-            <div class="carousel-caption"></div>
-          </ngx-slick-carousel>
+<div *ngIf="loggedin">
+  <div class="movie-container">
+    <h2>Watch List</h2>
+    <div class="image-container d-flex justify-content-center">
+      <div class="d-flex align-items-center">
+        <div *ngFor="">
+          <!-- <img (click)="MoviePopUp(film)" src="{{  }}" alt="{{  }}" /> -->
         </div>
       </div>
     </div>
-  </ng-template>
-</ngb-carousel>
+  </div>
+</div>
 
-<!-- <div class="overlay">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="26"
-              height="26"
-              fill="currentColor"
-              class="bi bi-play-circle"
-              viewBox="0 0 16 16"
-            >
-              <path
-                d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"
-              />
-              <path
-                d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445z"
-              />
-            </svg>
+<div>
+  <div class="movie-container">
+    <h1>Action</h1>
 
-            <div class="title">{{ film.title }}</div>
-            <p class="description">here....</p>
-
+    <div class="image-container d-flex justify-content-center">
+      <div class="d-flex align-items-center">
+     
+        <div class="cards" *ngFor="let film of action">
+          <img
+          (click)="MoviePopUp(film)"
+            src="{{ film.poster }}"
+            alt="{{ film.title }}"
+          />
+          <div class="overlay">
             <button type="button" class="btn btn-secondary">+ WatchList</button>
-          </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+
+  <div class="movie-container">
+    <h1>Comedy</h1>
+
+    <div class="image-container d-flex justify-content-center">
+      <div class="d-flex align-items-center">
+        <div *ngFor="let film of comedy">
+          <img
+            (click)="MoviePopUp(film)"
+            src="{{ film.poster }}"
+            alt="{{ film.title }}"
+          />
+          <div class="overlay">
+            <button type="button" class="btn btn-secondary">+ WatchList</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+<<<<<<< HEAD
+
+
+=======
+  
+>>>>>>> 38e1ae82d75e411462781cd6322e4b3216372e0d
+  <div class="movie-container">
+    <h1>Family</h1>
+
+    <div class="image-container d-flex justify-content-center">
+      <div class="d-flex align-items-center">
+        <div *ngFor="let film of family">
+          <img
+            (click)="MoviePopUp(film)"
+            src="{{ film.poster }}"
+            alt="{{ film.title }}"
+          />
+          <div class="overlay">
+            <button type="button" class="btn btn-secondary">+ WatchList</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+  <div class="movie-container">
+    <h1>Drama</h1>
+
+    <div class="image-container d-flex justify-content-center">
+      <div class="d-flex align-items-center">
+        <div *ngFor="let film of drama">
+          <img
+            (click)="MoviePopUp(film)"
+            src="{{ film.poster }}"
+            alt="{{ film.title }}"
+          />
+          <div class="overlay">
+            <button type="button" class="btn btn-secondary">+ WatchList</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div>
+  <div class="movie-container">
+    <h1>Crime</h1>
+
+    <div class="image-container d-flex justify-content-center">
+      <div class="d-flex align-items-center">
+        <div *ngFor="let film of crime">
+          <img
+            (click)="MoviePopUp(film)"
+            src="{{ film.poster }}"
+            alt="{{ film.title }}"
+          />
+          <div class="overlay">
+            <button type="button" class="btn btn-secondary">+ WatchList</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

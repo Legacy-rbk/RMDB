@@ -2,27 +2,35 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
+import { MoviesPopUpComponent } from './MoviesPopUp.component';
 
-import { SecondNavComponent } from './Second-Nav.component';
 
-describe('SecondNavComponent', () => {
-  let component: SecondNavComponent;
-  let fixture: ComponentFixture<SecondNavComponent>;
+
+describe('MoviesPopUpComponent', () => {
+
+  let component: MoviesPopUpComponent;
+  let fixture: ComponentFixture<MoviesPopUpComponent>;
+
+
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SecondNavComponent ]
+      declarations: [ MoviesPopUpComponent ]
     })
     .compileComponents();
   }));
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(SecondNavComponent);
+
+
+   beforeEach(() => {
+    fixture = TestBed.createComponent(MoviesPopUpComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
+
 
   it('should create', () => {
     expect(component).toBeTruthy();
   });
 });
+
