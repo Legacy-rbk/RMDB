@@ -19,11 +19,11 @@ import { HttpClientModule } from '@angular/common/http';
 
 
 import { SecondNavComponent } from './Second-Nav/Second-Nav.component';
-import {SearchComponent} from './Search/Search.component';
+
 // import { NgbdCarouselConfig } from './carousel-config';
 import { CardComponent } from './Card/Card.component';
 
-import {searchModule} from './search/search.module';
+
 import { MoviesPopUpComponent } from './MoviesPopUp/MoviesPopUp.component';
 
 @NgModule({
@@ -34,7 +34,7 @@ import { MoviesPopUpComponent } from './MoviesPopUp/MoviesPopUp.component';
       AuthPopupComponent,
       CardComponent,
       SecondNavComponent,
-      SearchComponent,
+     
       MoviesPopUpComponent
    ]
   
@@ -53,7 +53,7 @@ import { MoviesPopUpComponent } from './MoviesPopUp/MoviesPopUp.component';
     ReactiveFormsModule,
     HttpClientModule,
     SlickCarouselModule,
-    searchModule,
+   
 
   ],
   providers: [{provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: {hasBackdrop: true}}],
