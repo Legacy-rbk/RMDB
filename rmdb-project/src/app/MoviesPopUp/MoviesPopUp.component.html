@@ -1,0 +1,26 @@
+<h1 mat-dialog-title>{{data.movie.title}}</h1>
+<div mat-dialog-content>
+
+    <iframe width="560" height="315" [src]="urlSafe"
+      frameborder="0" allowfullscreen></iframe>
+
+      <p>{{data.movie.year}}</p>
+      <p>{{data.movie.release_date}}</p>
+      <p>{{data.movie.imdb_rating}}</p>
+      {{comment}}
+  
+  <mat-form-field appearance="fill">
+    <input
+        id="comment"
+        type="text"
+        class="form-control "
+        [(ngModel)]="comment"
+        placeholder="add a comment..."
+      />
+  </mat-form-field>
+
+</div>
+<div mat-dialog-actions>
+  <button mat-button mat-dialog-close>close</button>
+  <button mat-button mat-dialog-close >add comment</button>
+</div>

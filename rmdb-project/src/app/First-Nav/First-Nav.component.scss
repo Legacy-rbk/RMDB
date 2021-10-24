@@ -5,7 +5,6 @@
  max-width:100%;
  padding: 0px;
  
-//  margin-left:-0.8%;
   .header {
     width:100%;
     display: flex;
@@ -205,6 +204,18 @@ ul {
     }
   }
 }
+
+
+
 .logo { 
-    height:67px;
+    height:47px  !important;
+   margin-top: -5px !important;
+   margin-right:40px !important;
+
+}
+.cursor{
+  cursor: pointer;
+}
+.opacity {
+  opacity: 0.8 !important;
 }
