@@ -7,6 +7,10 @@ import { Component, OnInit, HostListener,ElementRef, ViewChild ,Input } from '@a
 })
 export class SecondNavComponent implements OnInit {
   sticky = false;
+  
+  refresh(): void {
+    window.location.reload();
+}
   @Input() SignOut: Function;
   
 

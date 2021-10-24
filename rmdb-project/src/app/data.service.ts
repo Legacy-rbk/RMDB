@@ -10,15 +10,15 @@ import { Movie } from './Movie'
 
 export class DataService {
 
-  configUrl = 'http://localhost:3000/api/pop';
-  getConfig() {
-    return this.http.get<Movie>(this.configUrl);
+  allmovies = 'http://localhost:3000/api/pop';
+  getAll() {
+    return this.http.get<Movie>(this.allmovies);
   }
 
 
-  configUrl1 = 'http://localhost:3000/api/slider';
-  getconfig1() {
-    return this.http.get<Movie>(this.configUrl1)
+  sliders = 'http://localhost:3000/api/slider';
+  getSliders() {
+    return this.http.get<Movie>(this.sliders)
   }
 
 
@@ -49,7 +49,7 @@ export class DataService {
 
 
 
-  addComment(u,c){
+  addComment(u:string,c){
     return this.http.put<Movie>(u,c);
   }
 
