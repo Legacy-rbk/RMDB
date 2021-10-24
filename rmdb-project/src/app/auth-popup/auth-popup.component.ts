@@ -24,7 +24,10 @@ export class AuthPopupComponent implements OnInit {
   user: User = {
     email: '',
     username: '',
-    password: ''
+    password: '',
+    toWatchList:[]
+   
+
   };
  
   switch(): void {

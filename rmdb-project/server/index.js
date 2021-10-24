@@ -42,9 +42,9 @@ app.post('/api/videos', function (req, res) {
     })
 });
 
-app.put('/api/videos/:videoId', function (req, res) {
+app.put('/api/popular/:videoId', function (req, res) {
   console.log(req.params, req.body)
-  Video.findByIdAndUpdate({ _id: req.params.videoId }, req.body)
+  Popular.findByIdAndUpdate({_id :req.params.videoId } , {$push :{comments : req.body} } )
     .then((result) => {
       res.status(201).send(result);
     })
@@ -52,6 +52,7 @@ app.put('/api/videos/:videoId', function (req, res) {
       res.status(403).send('failed');
     });
 });
+
 app.get('/api/videos/:videoId', function (req, res) {
   Video.findOne({ _id: req.params.videoId })
     .then((result) => {
@@ -119,6 +120,9 @@ app.get('/api/pop', function (req, res) {
       res.status(403).send('failed');
     });
 });
+
+
+
 app.get('/api/pop/:videoId', function (req, res) {
   Popular.findOne({ _id: req.params.videoId })
     .then((result) => {
@@ -161,5 +165,67 @@ app.post('/signin', (req, res) => {
     })
     .catch((err) => res.status(403).send(err))
 })
+
+
+
+
+
+
+
+app.get('/user/:email',(req,res)=>{
+  User.findOne({email:req.params.email}).then((user)=>res.status(200).send(user))
+  .catch((err)=>res.status(403).send(err))
+})
+
+
+
+
+
+
+app.get('/api/Action', function (req, res) {
+  Popular.find({genres:"Action"})
+    .then((result) => {
+      res.status(201).send(result);
+    })
+    .catch(() => {
+      res.status(403).send('failed');
+    });
+});
+app.get('/api/Drama', function (req, res) {
+  Popular.find({genres:"Drama"})
+    .then((result) => {
+      res.status(201).send(result);
+    })
+    .catch(() => {
+      res.status(403).send('failed');
+    });
+});
+app.get('/api/Comedy', function (req, res) {
+  Popular.find({genres:"Comedy"})
+    .then((result) => {
+      res.status(201).send(result);
+    })
+    .catch(() => {
+      res.status(403).send('failed');
+    });
+});
+app.get('/api/Family', function (req, res) {
+  Popular.find({genres:"Family"})
+    .then((result) => {
+      res.status(201).send(result);
+    })
+    .catch(() => {
+      res.status(403).send('failed');
+    });
+});
+app.get('/api/Crime', function (req, res) {
+  Popular.find({genres:"Crime"})
+    .then((result) => {
+      res.status(201).send(result);
+    })
+    .catch(() => {
+      res.status(403).send('failed');
+    });
+});
 
 app.listen(PORT, () => { console.log('yemshy 3al 3000') });

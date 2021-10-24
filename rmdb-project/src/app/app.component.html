@@ -1,18 +1,24 @@
-<div *ngIf='loggedin === false'>
-<app-First-Nav  [logPopUp]="logPopUp.bind(this)"></app-First-Nav>
+<div *ngIf="loggedin === false">
+  <app-First-Nav [logPopUp]="logPopUp.bind(this)"></app-First-Nav>
 </div>
 <div *ngIf="loggedin === true">
   <app-Second-Nav [SignOut]="SignOut.bind(this)"></app-Second-Nav>
 </div>
 
-<app-Slider-Show [loggedin]="loggedin" ></app-Slider-Show>
+<app-Slider-Show [loggedin]="loggedin"></app-Slider-Show>
 
-<app-Card [movies]='movies'></app-Card>
+<app-Card
+  [MoviePopUp]="MoviePopUp.bind(this)"
+  [movies]="movies"
+  [action]="action"
+  [drama]="drama"
+  [family]="family"
+  [comedy]="comedy"
+  [crime]="crime"
+  [loggedin]="loggedin"
+></app-Card>
 
-<button (click)="MoviePopUp()">movie</button>
-<div *ngIf="error">{{error}}</div>
+<!-- <button (click)="MoviePopUp()">movie</button> -->
+<div *ngIf="error">{{ error }}</div>
 
 <router-outlet></router-outlet>
-
-
-

@@ -16,9 +16,6 @@ export class FirstNavComponent implements OnInit {
     window.location.reload();
 }
 
-
-  
-  
   constructor() { }
 
   ngOnInit() {
