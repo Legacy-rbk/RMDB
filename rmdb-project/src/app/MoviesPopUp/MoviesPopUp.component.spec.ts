@@ -20,11 +20,9 @@ describe('MoviesPopUpComponent', () => {
     .compileComponents();
   }));
 
- 
-  
 
 
-  beforeEach(() => {
+   beforeEach(() => {
     fixture = TestBed.createComponent(MoviesPopUpComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
