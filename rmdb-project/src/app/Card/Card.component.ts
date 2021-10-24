@@ -10,6 +10,11 @@ export class CardComponent implements OnInit {
   
 @Input() MoviePopUp: Function;
 @Input() movies:Movie[]
+@Input() action:Movie;
+@Input() drama:Movie;
+@Input()  family:Movie;
+@Input()  comedy:Movie;
+@Input()  crime:Movie;
   constructor() { }
 
   ngOnInit() {
