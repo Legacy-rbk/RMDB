@@ -1,0 +1,181 @@
+<ngb-carousel>
+  <ng-template ngbSlide>
+    <div *ngIf="sliders" class="picsum-img-wrapper">
+      <img
+        class="d-block w-100"
+        src="{{ sliders[0].poster }}"
+        alt="Random first slide"
+      />
+    </div>
+    <div class="opacity">
+      <div *ngIf="sliders" class="carousel-caption bg-dark">
+        <div class="title">{{ sliders[0].title }}</div>
+        <p class="description">{{ sliders[0].description }}</p>
+        <br />
+
+        <button type="button" class="btn btn-secondary">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            fill="currentColor"
+            class="bi bi-play"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M10.804 8 5 4.633v6.734L10.804 8zm.792-.696a.802.802 0 0 1 0 1.392l-6.363 3.692C4.713 12.69 4 12.345 4 11.692V4.308c0-.653.713-.998 1.233-.696l6.363 3.692z"
+            /></svg
+          >Play
+        </button>
+        {{ "  " }}
+        <button (click)="watchList()" type="button" class="btn btn-secondary">
+          + WatchList
+        </button>
+      </div>
+    </div>
+  </ng-template>
+  <ng-template ngbSlide>
+    <div class="picsum-img-wrapper" *ngIf="sliders">
+      <img
+        class="d-block w-100"
+        src="{{ sliders[1].poster }}"
+        alt="Random first slide"
+      />
+    </div>
+    <div class="opacity">
+      <div class="carousel-caption bg-dark" *ngIf="sliders">
+        <div class="title">{{ sliders[1].title }}</div>
+
+        <p class="description">{{ sliders[1].description }}</p>
+
+        <br />
+        <button type="button" class="btn btn-secondary">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            fill="currentColor"
+            class="bi bi-play"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M10.804 8 5 4.633v6.734L10.804 8zm.792-.696a.802.802 0 0 1 0 1.392l-6.363 3.692C4.713 12.69 4 12.345 4 11.692V4.308c0-.653.713-.998 1.233-.696l6.363 3.692z"
+            /></svg
+          >Play
+        </button>
+        {{ "  " }}
+        <button (click)="watchList()" type="button" class="btn btn-secondary">
+          + WatchList
+        </button>
+      </div>
+    </div>
+  </ng-template>
+  <ng-template ngbSlide>
+    <div class="picsum-img-wrapper" *ngIf="sliders">
+      <img
+        class="d-block w-100"
+        src="{{ sliders[2].poster }}"
+        alt="Random first slide"
+      />
+    </div>
+    <div class="opacity">
+      <div class="carousel-caption bg-dark" *ngIf="sliders">
+        <div class="title">{{ sliders[2].title }}</div>
+
+        <p class="description">{{ sliders[2].description }}</p>
+
+        <br />
+        <button type="button" class="btn btn-secondary">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            fill="currentColor"
+            class="bi bi-play"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M10.804 8 5 4.633v6.734L10.804 8zm.792-.696a.802.802 0 0 1 0 1.392l-6.363 3.692C4.713 12.69 4 12.345 4 11.692V4.308c0-.653.713-.998 1.233-.696l6.363 3.692z"
+            /></svg
+          >Play
+        </button>
+        {{ "  " }}
+        <button (click)="watchList()" type="button" class="btn btn-secondary">
+          + WatchList
+        </button>
+      </div>
+    </div>
+  </ng-template>
+  <ng-template ngbSlide>
+    <div class="picsum-img-wrapper" *ngIf="sliders">
+      <img
+        class="d-block w-100"
+        src="{{ sliders[3].poster }}"
+        alt="Random first slide"
+      />
+    </div>
+    <div class="opacity">
+      <div class="carousel-caption bg-dark" *ngIf="sliders">
+        <div class="title">{{ sliders[3].title }}</div>
+
+        <p class="description">{{ sliders[3].description }}</p>
+
+        <br />
+        <button type="button" class="btn btn-secondary">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            fill="currentColor"
+            class="bi bi-play"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M10.804 8 5 4.633v6.734L10.804 8zm.792-.696a.802.802 0 0 1 0 1.392l-6.363 3.692C4.713 12.69 4 12.345 4 11.692V4.308c0-.653.713-.998 1.233-.696l6.363 3.692z"
+            /></svg
+          >Play
+        </button>
+        {{ "  " }}
+        <button (click)="watchList()" type="button" class="btn btn-secondary">
+          + WatchList
+        </button>
+      </div>
+    </div>
+  </ng-template>
+  <ng-template ngbSlide>
+    <div class="picsum-img-wrapper" *ngIf="sliders">
+      <img
+        class="d-block w-100"
+        src="{{ sliders[4].poster }}"
+        alt="Random first slide"
+      />
+    </div>
+    <div class="opacity">
+      <div class="carousel-caption bg-dark" *ngIf="sliders">
+        <div class="title">{{ sliders[4].title }}</div>
+
+        <p class="description">{{ sliders[4].description }}</p>
+
+        <br />
+        <button type="button" class="btn btn-secondary">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            fill="currentColor"
+            class="bi bi-play"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M10.804 8 5 4.633v6.734L10.804 8zm.792-.696a.802.802 0 0 1 0 1.392l-6.363 3.692C4.713 12.69 4 12.345 4 11.692V4.308c0-.653.713-.998 1.233-.696l6.363 3.692z"
+            /></svg
+          >Play
+        </button>
+        {{ "  " }}
+        <button (click)="watchList()" type="button" class="btn btn-secondary">
+          + WatchList
+        </button>
+      </div>
+    </div>
+  </ng-template>
+</ngb-carousel>

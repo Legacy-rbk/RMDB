@@ -1,0 +1,53 @@
+<h1 mat-dialog-title>{{ data.movie.title }}</h1>
+
+<div mat-dialog-content>
+  <iframe
+    width="1235"
+    height="515"
+    [src]="urlSafe"
+    frameborder="0"
+    allowfullscreen
+  ></iframe>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <p>Year :{{ data.movie.year }}</p>
+      <p>Released :{{ data.movie.release_date }}</p>
+      <p>Rating : {{ data.movie.imdb_rating }}</p>
+      <p>Description :{{ data.movie.description }}</p>
+    </div>
+
+    <div class="col">
+     
+    
+      <div  *ngFor="let com of data.movie.comments">
+        <h2>{{ com.user }}</h2>
+  
+        <h5>{{ com.comment }}</h5>
+      </div>
+     
+    </div>
+    <mat-form-field appearance="fill">
+      <input
+        id="comment"
+        type="text"
+        class="form-control"
+        [(ngModel)]="comment"
+        placeholder="add a comment..."
+      />
+      <div >
+        <br/>
+        <button class="btn btn-secondary" mat-button (click)="addcomment()">
+          add comment
+        </button>
+        <br/>
+        <button class="btn btn-secondary" mat-button mat-dialog-close>
+          close
+        </button>
+        
+      </div>
+    </mat-form-field>
+    
+  </div>
+</div>

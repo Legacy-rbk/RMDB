@@ -1,0 +1,117 @@
+<div *ngIf="loggedin">
+  <div class="movie-container">
+    <h2>Watch List</h2>
+    <div class="image-container d-flex justify-content-center">
+      <div class="d-flex align-items-center">
+        <div *ngFor=" let film of user[0].toWatchList ">
+          <img (click)="MoviePopUp(film)" src="{{ film.poster }}" alt="{{film.title  }}" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div>
+  <div class="movie-container">
+    <h2>Action</h2>
+
+    <div class="image-container d-flex justify-content-center">
+      <div class="d-flex align-items-center">
+     
+        <div class="cards" *ngFor="let film of action">
+          <img
+          (click)="MoviePopUp(film)"
+            src="{{ film.poster }}"
+            alt="{{ film.title }}"
+          />
+          <div class="overlay">
+            <button (click)="onAdd(film)" type="button" class="btn btn-secondary">+ WatchList</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+
+  <div class="movie-container">
+    <h2>Comedy</h2>
+
+    <div class="image-container d-flex justify-content-center">
+      <div class="d-flex align-items-center">
+        <div *ngFor="let film of comedy">
+          <img
+            (click)="MoviePopUp(film)"
+            src="{{ film.poster }}"
+            alt="{{ film.title }}"
+          />
+          <div class="overlay">
+            <button type="button" class="btn btn-secondary">+ WatchList</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+  
+  <div class="movie-container">
+    <h2>Family</h2>
+
+    <div class="image-container d-flex justify-content-center">
+      <div class="d-flex align-items-center">
+        <div *ngFor="let film of family">
+          <img
+            (click)="MoviePopUp(film)"
+            src="{{ film.poster }}"
+            alt="{{ film.title }}"
+          />
+          <div class="overlay">
+            <button type="button" class="btn btn-secondary">+ WatchList</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+  <div class="movie-container">
+    <h2>Drama</h2>
+
+    <div class="image-container d-flex justify-content-center">
+      <div class="d-flex align-items-center">
+        <div *ngFor="let film of drama">
+          <img
+            (click)="MoviePopUp(film)"
+            src="{{ film.poster }}"
+            alt="{{ film.title }}"
+          />
+          <div class="overlay">
+            <button type="button" class="btn btn-secondary">+ WatchList</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div>
+  <div class="movie-container">
+    <h2>Crime</h2>
+
+    <div class="image-container d-flex justify-content-center">
+      <div class="d-flex align-items-center">
+        <div *ngFor="let film of crime">
+          <img
+            (click)="MoviePopUp(film)"
+            src="{{ film.poster }}"
+            alt="{{ film.title }}"
+          />
+          <div class="overlay">
+            <button type="button" class="btn btn-secondary">+ WatchList</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

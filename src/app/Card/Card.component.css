@@ -1,0 +1,42 @@
+* {
+  box-sizing: border-box;
+  width:99%
+}
+.movie-container {
+  padding: 2rem 2rem;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25);
+  margin-bottom: 1rem;
+  background-color: #262626;
+  margin-right: -220rem;
+  margin-left: 1rem;
+  overflow-y : hidden ;
+  overflow-x : auto;
+  white-space: nowrap;
+}
+.image-container {
+  -webkit-overflow-scrolling: touch;
+}
+.movie-container::-webkit-scrollbar {
+  display: none;
+}
+img {
+  width: 10rem;
+  height: 15rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+  border: 1px solid #FFCC00;
+  box-shadow:   #1A1A1A 5px 5px 5px;
+}
+.image-container {
+  transition: transform 0.2s;
+  display: inline-block;
+}
+
+h2{
+  color:white
+}
+
+
+

@@ -1,0 +1,25 @@
+/* 
+.mat-dialog-container{
+  background-color: white  ;
+  color: black ;
+} */
+
+.acc {
+  font-size: 1em;
+  font-weight: bold;
+  font-family: "georgia";
+}
+#email {
+  width: 370px;
+  height: 50px;
+}
+
+#password {
+  width: 370px;
+  height: 50px;
+}
+
+#username {
+  width: 370px;
+  height: 50px;
+}
