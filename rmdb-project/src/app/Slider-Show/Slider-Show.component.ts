@@ -25,9 +25,10 @@ alert('you must login first !')
 
 constructor( private  movie:DataService) { 
    
-}
-ngOnInit():void {
-this.getSliders.push(this.movie.getconfig1().subscribe(data=>this.sliders=data))
+  }
+
+  ngOnInit():void {
+    this.getSliders.push(this.movie.getSliders().subscribe(data=>this.sliders=data))
   }
 
 }
