@@ -28,7 +28,7 @@ export class SliderShowComponent {
   }
 
   ngOnInit():void {
-    this.getSliders.push(this.movie.getconfig1().subscribe(data=>this.sliders=data))
+    this.getSliders.push(this.movie.getSliders().subscribe(data=>this.sliders=data))
   }
 
 }

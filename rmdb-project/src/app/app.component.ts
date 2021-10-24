@@ -23,12 +23,12 @@ export class AppComponent {
   title = 'rmdb-project';
   moviesget: Subscription[] = [];
   movies: Movie;
-  action:Movie;
-  drama:Movie;
-  family:Movie;
-  comedy:Movie;
-  crime:Movie;
-  moviepop:Movie=null;
+  action: Movie;
+  drama: Movie;
+  family: Movie;
+  comedy: Movie;
+  crime: Movie;
+  moviepop: Movie = null;
   user: User;
   loggedin: boolean = false;
   error: string;
@@ -47,7 +47,12 @@ export class AppComponent {
     if (user.email !== '' && user.password !== '') {
       this.auth.signIn(user.email, user.password).subscribe(
         {
-          next: data => { this.user = data; this.loggedin = true; this.error = ''; this.toWatchList=data.toWatchList ; console.log(data) },
+          next: data => {
+            this.user = data;
+            this.loggedin = true;
+            this.error = '';
+            localStorage.email = user.email;
+          },
           error: err => { this.error = err.error; console.log(err.error) }
         })
     }
@@ -59,27 +64,33 @@ export class AppComponent {
     console.log(user)
     if (user.username !== '' && user.email !== '' && user.password !== '') {
       this.auth.signUp(user.email, user.password, user.username).subscribe({
-        next: data => { this.user = data; this.loggedin = true; this.error = ''; console.log(data) },
+        next: data => {
+          this.user = data;
+          this.loggedin = true;
+          this.error = '';
+          localStorage.email = user.email;
+        },
         error: err => { this.error = err.error; console.log(err.error) }
       })
     }
     else { this.error = 'missing fileds' }
   }
 
-  SignOut = ()=>{
-    this.user=null ;
+  SignOut = () => {
+    this.user = null;
     this.loggedin = false
+    localStorage.clear()
   }
 
 
   constructor(public dialog: MatDialog, private movie: DataService, private auth: AuthService) { }
-  logPopUp():void {
+  logPopUp(): void {
     const dialogRef = this.dialog.open(AuthPopupComponent, {
       width: '420px',
       height: '500px',
       disableClose: false,
       data: { signin: this.SignIn, signup: this.SignUp },
-      panelClass:'custom-modalbox1'
+      panelClass: 'custom-modalbox1'
     });
 
 
@@ -88,14 +99,14 @@ export class AppComponent {
     });
   }
 
-  MoviePopUp(moviepop):void{
+  MoviePopUp(moviepop): void {
     const dialogRef1 = this.dialog.open(MoviesPopUpComponent, {
       width: '1300px',
       height: '900px',
       disableClose: false,
       panelClass: 'custom-modalbox',
-      data:{movie : moviepop}
-      
+      data: { movie: moviepop, user: this.user, loggedin: this.loggedin }
+
     });
 
 
@@ -105,10 +116,11 @@ export class AppComponent {
 
   }
 
-  
+
 
   ngOnInit(): void {
-    this.moviesget.push(this.movie.getConfig().subscribe(data => this.movies = data))
+    if(localStorage.email){this.auth.check(localStorage.email).subscribe(data=>{this.user = data ; this.loggedin = true})}
+    this.moviesget.push(this.movie.getAll().subscribe(data => this.movies = data))
     this.moviesget.push(this.movie.getAction().subscribe(data => this.action = data))
     this.moviesget.push(this.movie.getComedy().subscribe(data => this.comedy = data))
     this.moviesget.push(this.movie.getCrime().subscribe(data => this.crime = data))

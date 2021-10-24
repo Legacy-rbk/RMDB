@@ -15,7 +15,7 @@ const popularSchema = new mongoose.Schema({
   title: String,
   year: String,
   youtube_trailer_key: String,
-  comments: [String],
+  comments: [],
 });
 
 const Popular = mongoose.model("Popular", popularSchema);

@@ -1,4 +1,4 @@
-<h1 mat-dialog-title>{{data.movie.title}}</h1>
+<h1 mat-dialog-title>{{data.movie.title}} </h1>
 <div mat-dialog-content>
 
     <iframe width="560" height="315" [src]="urlSafe"
@@ -7,7 +7,10 @@
       <p>{{data.movie.year}}</p>
       <p>{{data.movie.release_date}}</p>
       <p>{{data.movie.imdb_rating}}</p>
-      {{comment}}
+      <div *ngFor="let com of data.movie.comments" >
+        <p>{{com.user}}</p>
+        <p>{{com.comment}}</p>
+      </div>
   
   <mat-form-field appearance="fill">
     <input
@@ -22,5 +25,5 @@
 </div>
 <div mat-dialog-actions>
   <button mat-button mat-dialog-close>close</button>
-  <button mat-button mat-dialog-close >add comment</button>
+  <button mat-button  (click)="addcomment()" >add comment</button>
 </div>
