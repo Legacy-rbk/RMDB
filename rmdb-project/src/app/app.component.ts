@@ -32,6 +32,8 @@ export class AppComponent {
   user: User;
   loggedin: boolean = false;
   error: string;
+  toWatchList : any[] ;
+
   sliderConfig = {
     slidesToShow: 4,
     slidesToScroll: 2,
@@ -45,7 +47,7 @@ export class AppComponent {
     if (user.email !== '' && user.password !== '') {
       this.auth.signIn(user.email, user.password).subscribe(
         {
-          next: data => { this.user = data; this.loggedin = true; this.error = ''; console.log(data) },
+          next: data => { this.user = data; this.loggedin = true; this.error = ''; this.toWatchList=data.toWatchList ; console.log(data) },
           error: err => { this.error = err.error; console.log(err.error) }
         })
     }

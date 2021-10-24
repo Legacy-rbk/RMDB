@@ -1,54 +1,49 @@
 <div class="navbar">
-  <div class="header__main" id="stickyHeader" [class.sticky]="sticky" #stickHeader>
-
+  <div
+    class="header__main"
+    id="stickyHeader"
+    [class.sticky]="sticky"
+    #stickHeader
+  >
     <div class="header__left">
-
       <ul>
         <li class="logo">
           <a href="#">RMDB</a>
-
         </li>
       </ul>
-
     </div>
-
 
     <div class="header__right">
       <ul>
-
         <li>
           <input />
         </li>
-        <li><a href="#">
+        <li>
+          <a href="#">
             <mat-icon>search</mat-icon>
-          </a></li>
+          </a>
+        </li>
 
         <li class="active"><a href="#">Home</a></li>
 
-        <li>  
+        <li>
           <div ngbDropdown>
-          <a  ngbDropdownToggle>
-            Categories
-          </a>
-          <div class="opacity" ngbDropdownMenu>
-            <button ngbDropdownItem>Action</button>
-            <button ngbDropdownItem>Drama</button>
-            <button ngbDropdownItem>Comedy</button>
-            <button ngbDropdownItem>Family</button>
-            <button ngbDropdownItem>Crime</button>
+            <a ngbDropdownToggle> Categories </a>
+            <div class="opacity" ngbDropdownMenu>
+              <button ngbDropdownItem>Action</button>
+              <button ngbDropdownItem>Drama</button>
+              <button ngbDropdownItem>Comedy</button>
+              <button ngbDropdownItem>Family</button>
+              <button ngbDropdownItem>Crime</button>
+            </div>
           </div>
-        </div></li>
+        </li>
         <li><a href="#">Watchlist</a></li>
 
         <li>
           <mat-icon class="cursor" (click)="SignOut()">logout</mat-icon>
         </li>
-
       </ul>
     </div>
   </div>
-
-
-
-
 </div>
