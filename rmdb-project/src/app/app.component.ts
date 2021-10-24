@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AuthPopupComponent } from './auth-popup/auth-popup.component';
+import { MoviesPopUpComponent } from './MoviesPopUp/MoviesPopUp.component';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { Movie } from './Movie'
 import { DataService } from './data.service'
@@ -17,9 +18,6 @@ import { User } from './User';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-
-
-
 
 export class AppComponent {
   title = 'rmdb-project';
@@ -60,14 +58,20 @@ export class AppComponent {
     else { this.error = 'missing fileds' }
   }
 
+  SignOut = ()=>{
+    this.user=null ;
+    this.loggedin = false
+  }
+
 
   constructor(public dialog: MatDialog, private movie: DataService, private auth: AuthService) { }
-  navOpen():void {
+  logPopUp():void {
     const dialogRef = this.dialog.open(AuthPopupComponent, {
       width: '420px',
       height: '500px',
       disableClose: false,
-      data: { signin: this.SignIn, signup: this.SignUp }
+      data: { signin: this.SignIn, signup: this.SignUp },
+      panelClass:'custom-modalbox1'
     });
 
 
@@ -76,19 +80,23 @@ export class AppComponent {
     });
   }
 
-  // openDialog() {
-  //   const dialogRef = this.dialog.open(AuthPopupComponent, {
-  //     width: '420px',
-  //     height: '500px',
-  //     disableClose: false,
-  //     data:{signin:this.SignIn , signup:this.SignUp}
-  //   });
+  MoviePopUp():void{
+    const dialogRef1 = this.dialog.open(MoviesPopUpComponent, {
+      width: '1300px',
+      height: '900px',
+      disableClose: false,
+      panelClass: 'custom-modalbox'
+      
+    });
 
 
-  //   dialogRef.afterClosed().subscribe(result => {
-  //     console.log('The dialog was closed')
-  //   });
-  // }
+    dialogRef1.afterClosed().subscribe(result => {
+      console.log('The dialog was closed')
+    });
+
+  }
+
+  
 
   ngOnInit(): void {
     this.moviesget.push(this.movie.getConfig().subscribe(data => this.movies = data))

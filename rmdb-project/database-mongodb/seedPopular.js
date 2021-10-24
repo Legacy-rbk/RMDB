@@ -17,6 +17,8 @@ const best = [
     stars: ["Dennis Quaid", "Meagan Good", "Michael Ealy"],
     directors: ["Guy Ritchie"],
     countries: ["United States of America"],
+    description:
+      "Aladdin, a street urchin in the Arabian city of Agrabah, and his monkey Abu meet Princess Jasmine, who has snuck away from her sheltered life in the palace. Jasmine wishes to succeed her father as Sultan, but is instead expected to marry one of her royal suitors, including the charming yet dimwitted Prince Anders.",
     language: ["English"],
   },
   {
@@ -34,6 +36,8 @@ const best = [
     stars: ["Jennifer Lawrence", "Mike Gassaway"],
     directors: ["Adam McKay"],
     countries: ["Germany", "Italy"],
+    description:
+      "A classic werewolf flick with an amphibious twist; it's a race against time to find the antidote. A classic werewolf flick with an amphibious twist; it's a race against time to find the antidote. A classic werewolf flick with an amphibious twist; it's a race against time to find the antidote.",
     language: ["English"],
   },
   {
@@ -64,6 +68,8 @@ const best = [
     ],
     directors: ["Colin Trevorrow"],
     countries: ["United States of America"],
+    description:
+      "A new theme park, built on the original site of Jurassic Park, creates a genetically modified hybrid dinosaur, the Indominus Rex, which escapes containment and goes on a killing spree. Twenty-two years after the original Jurassic Park failed, the new park, also known as Jurassic World, is open for business.",
     language: ["English"],
   },
   {
@@ -88,6 +94,8 @@ const best = [
       "2 more credits",
     ],
     countries: ["United States of America"],
+    description:
+      "An unfeeling gangster seeks to ruin the life of a young girl who rejected him. He forces her into prostitution and spies on her regularly, then he soon begins to fall for her.An unfeeling gangster seeks to ruin the life of a young girl who rejected him.",
     language: ["English"],
   },
   {
@@ -116,6 +124,8 @@ const best = [
     ],
     directors: ["Tim Kirkby"],
     countries: ["United States of America"],
+    description:
+      "A disgraced ex-cop seeks solace by moving to the woods, but his quiet life comes to an end when a private eye recruits him to investigate a murder. A disgraced ex-cop seeks solace by moving to the woods, but his quiet life comes to an end when a private eye recruits him to investigate a murder. ",
     language: ["English"],
   },
   {
@@ -171,6 +181,8 @@ const best = [
     ],
     directors: ["J.M. Berrios"],
     countries: ["United States of America", "USA"],
+    description:
+      "A cynical college professor takes a keen interest in a talented young writing student. A cynical college professor takes a keen interest in a talented young writing student. A cynical college professor takes a keen interest in a talented young writing student.",
     language: ["English", "en"],
   },
   {
@@ -186,6 +198,8 @@ const best = [
     stars: ["Elle Fanning", "Dakota Fanning"],
     directors: ["Mélanie Laurent", "Michelle MacLaren"],
     countries: ["United States of America", "USA"],
+    description:
+      "The Nightingale is a 2018 Australian drama film written, directed, and co-produced by Jennifer Kent. Set in 1825 in the penal colony of Van Diemen's Land (present-day Tasmania), the film follows a young female convict seeking revenge for a terrible act of violence committed against her family.",
     language: ["English", "N/A"],
   },
   {
@@ -220,6 +234,8 @@ const best = [
     ],
     directors: ["David Sandberg"],
     countries: ["Sweden", "United States of America"],
+    description:
+      "In 1985, Kung Fury, the toughest martial artist cop in Miami, goes back in time to kill the worst criminal of all time - Kung Führer, a.k.a. Adolf Hitler. ... Kung Fury decides to travel back in time, to Nazi Germany, in order to kill Hitler and end the Nazi empire once and for all.",
     language: ["English", "Deutsch", "svenska", "English, German, Swedish"],
   },
   {
@@ -246,6 +262,8 @@ const best = [
     ],
     directors: ["Farhad Mann", "Lora Martinez-Cunningham", "Amber LeRae Earls"],
     countries: ["United States of America", "USA"],
+    description:
+      "Found guilty of murder, a woman is forced to give custody of her infant daughter to her biggest rival, her own sister. Now, released from prison, she'll stop at nothing to get her daughter back.",
     language: ["English"],
   },
   {
@@ -621,6 +639,8 @@ const best = [
     ],
     directors: ["Archie Hekagery"],
     countries: ["Indonesia"],
+    description:
+      "Wealthy and spoiled, a young man finds something to fight for when he falls in love with an environment activist protesting his family's business. Wealthy and spoiled, a young man finds something to fight for when he falls in love with an environment activist protesting his family's business.",
     language: ["Bahasa indonesia"],
   },
   {
@@ -648,6 +668,8 @@ const best = [
     ],
     directors: ["Mark Rydell"],
     countries: ["United States of America"],
+    description:
+      "In the film, two down-on-their-luck con men try to pull off the biggest heist ever seen in late nineteenth-century New York City. They are opposed by the greatest bank robber of the day, and by a crusading newspaper editor.",
     language: ["Español", "Deutsch", "English"],
   },
   {
@@ -675,6 +697,9 @@ const best = [
     ],
     directors: ["Leszek Burzynski"],
     countries: ["United States of America"],
+    description:
+      "In the film, two down-on-their-luck con men try to pull off the biggest heist ever seen in late nineteenth-century New York City. They are opposed by the greatest bank robber of the day, and by a crusading newspaper editor.",
+
     language: ["English"],
   },
   {
@@ -702,6 +727,8 @@ const best = [
     ],
     directors: ["Paul W. S. Anderson"],
     countries: ["United Kingdom", "UK, Japan"],
+    description:
+      "Shopping is a 2013 New Zealand coming-of-age film written and directed by Mark Albiston and Louis Sutherland. It stars Kevin Paulo as a mixed race Samoan New Zealander who falls in with a group of shoplifters led by an Eastern-European immigrant played by Jacek Koman.",
     language: ["English"],
   },
   {
@@ -729,6 +756,8 @@ const best = [
     ],
     directors: ["Jake Schreier"],
     countries: ["United States of America"],
+    description:
+      "A retired burglar and a household appliance. Robot & Frank tells the story of relationship between a retired burglar and a household appliance more relentless than an alarm clock. Frank is a man who lives alone in a bucolic house in upstate New York and is somewhere along the slope into dementia.",
     language: ["English"],
   },
   {
@@ -756,6 +785,8 @@ const best = [
     ],
     directors: ["Robert Greenwald"],
     countries: ["United States of America"],
+    description:
+      "Koch Brothers Exposed is a 2012 U.S. documentary, compiled by liberal political activist and filmmaker Robert Greenwald from a viral video campaign produced by Brave New Films, about the alleged political activities of the Koch brothers.",
     language: ["English"],
   },
   {
@@ -803,6 +834,8 @@ const best = [
     ],
     directors: ["Bill Bennett"],
     countries: ["Australia"],
+    description:
+      "A young couple go to a remote and deserted coral island for a camping holiday, only to find that the island is inhabited by a ghost seeking retribution for a past outrage.",
     language: ["English", "Deutsch"],
   },
   {
@@ -830,6 +863,8 @@ const best = [
     ],
     directors: ["Nick Cassavetes", "Jeanne Byrd"],
     countries: ["United States of America", "Germany"],
+    description:
+      "Alpha Dog is a 2006 American crime drama film written and directed by Nick Cassavetes based on the true story of the kidnapping and murder of Nicholas Markowitz in 2000. It was first screened at the Sundance Film Festival on January 27, 2006, with a wide release the following year on January 12, 2007.",
     language: ["English", "Český", "Español"],
   },
   {
@@ -846,6 +881,8 @@ const best = [
     stars: ["Avery Anthony", "Mitchell Edwards"],
     directors: ["Clarence Williams IV"],
     countries: ["United States of America"],
+    description:
+      "A troubled young man named Hamilton returns home for the first time in years since leaving for college and reconnects with his childhood best friend, Tucker. The two reflect on life, love, adulthood, and the ups and downs of childhood.",
     language: ["English"],
   },
 ];

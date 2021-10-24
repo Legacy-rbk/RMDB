@@ -25,12 +25,24 @@
 
         <li class="active"><a href="#">Home</a></li>
 
-        <li><a href="#">Categories</a></li>
+        <li>  
+          <div ngbDropdown>
+          <a  ngbDropdownToggle>
+            Categories
+          </a>
+          <div class="opacity" ngbDropdownMenu>
+            <button ngbDropdownItem>Action</button>
+            <button ngbDropdownItem>Drama</button>
+            <button ngbDropdownItem>Comedy</button>
+            <button ngbDropdownItem>Family</button>
+            <button ngbDropdownItem>Horror</button>
+          </div>
+        </div></li>
         <li><a href="#">Watchlist</a></li>
 
-        <li><a href="#">
-            <mat-icon>logout</mat-icon>
-          </a></li>
+        <li>
+          <mat-icon class="cursor" (click)="SignOut()">logout</mat-icon>
+        </li>
 
       </ul>
     </div>

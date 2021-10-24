@@ -1,4 +1,4 @@
-import { Component, OnInit, HostListener,ElementRef, ViewChild } from '@angular/core';
+import { Component, OnInit, HostListener,ElementRef, ViewChild ,Input } from '@angular/core';
 
 @Component({
   selector: 'app-Second-Nav',
@@ -7,6 +7,8 @@ import { Component, OnInit, HostListener,ElementRef, ViewChild } from '@angular/
 })
 export class SecondNavComponent implements OnInit {
   sticky = false;
+  @Input() SignOut: Function;
+  
 
   constructor() { }
 
