@@ -1,10 +1,16 @@
+
 <div class="navbar">
-  <div class="header__main" id="stickyHeader" [class.sticky]="sticky" #stickHeader>
+  <div
+    class="header__main"
+    id="stickyHeader"
+    [class.sticky]="sticky"
+    #stickHeader
+  >
     <div class="header__left">
       <ul>
-
+        
         <li class="active">
-          <div>
+          <div >
             <img class="logo" (click)="refresh()" src="../../assets/signage.png" />
           </div>
         </li>
@@ -15,7 +21,7 @@
     <div class="header__right">
       <ul>
         <li>
-          <app-search></app-search>
+        <app-search></app-search>
         </li>
         <li>
           <a href="#">
@@ -26,10 +32,10 @@
         <li class="active"><a href="#">Home</a></li>
         <li>
           <div ngbDropdown>
-            <a ngbDropdownToggle>
+            <a  ngbDropdownToggle>
               Categories
             </a>
-            <div class="opacity" ngbDropdownMenu>
+            <div ngbDropdownMenu>
               <button ngbDropdownItem>Action</button>
               <button ngbDropdownItem>Drama</button>
               <button ngbDropdownItem>Comedy</button>
@@ -40,9 +46,9 @@
         </li>
 
         <li>
-
-          <mat-icon class="cursor" (click)="logPopUp()">login</mat-icon>
-
+          <a href="#">
+            <mat-icon>login</mat-icon>
+          </a>
         </li>
       </ul>
     </div>

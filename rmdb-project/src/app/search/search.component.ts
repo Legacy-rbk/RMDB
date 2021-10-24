@@ -15,15 +15,18 @@ export class SearchComponent implements OnInit {
   @Input() movies:Movie[]
 
   myControl = new FormControl();
-  options: string[] = [];
+  options: string[];
   filteredOptions: Observable<string[]>;
+  
+  
   ngOnInit() {
-    this.options.map(el=>{this.options.push(el.title);})
     this.filteredOptions = this.myControl.valueChanges
       .pipe(        
         debounceTime(500),
         map(value => this._filter(value))
       );
+      // this.options.map(el=>{this.options.push(el.title);})
+
   }
 
   private _filter(value: string): string[] {
