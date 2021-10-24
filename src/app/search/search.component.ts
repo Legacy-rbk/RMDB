@@ -1,37 +1,37 @@
-import {Component, OnInit,Input} from '@angular/core';
-import {FormControl} from '@angular/forms';
-import {Observable} from 'rxjs';
-import {map, debounceTime} from 'rxjs/operators';
-import {Movie} from '../Movie'
+// import {Component, OnInit,Input} from '@angular/core';
+// import {FormControl} from '@angular/forms';
+// import {Observable} from 'rxjs';
+// import {map, debounceTime} from 'rxjs/operators';
+// import {Movie} from '../Movie'
 
 
-@Component({
-  selector: 'app-search',
-  templateUrl: './search.component.html',
-  styleUrls: ['./search.component.scss']
-})
+// @Component({
+//   selector: 'app-search',
+//   templateUrl: './search.component.html',
+//   styleUrls: ['./search.component.scss']
+// })
 
-export class SearchComponent implements OnInit {
-  @Input() movies:Movie[]
+// export class SearchComponent implements OnInit {
+//   @Input() movies:Movie[]
 
-  myControl = new FormControl();
-  options: string[];
-  filteredOptions: Observable<string[]>;
+//   myControl = new FormControl();
+//   options: string[];
+//   filteredOptions: Observable<string[]>;
   
   
-  ngOnInit() {
-    // this.filteredOptions = this.myControl.valueChanges
-    //   .pipe(        
-    //     debounceTime(500),
-    //     map(value => this._filter(value))
-    //   );
-      // this.options.map(el=>{this.options.push(el.title);})
+//   ngOnInit() {
+//     // this.filteredOptions = this.myControl.valueChanges
+//     //   .pipe(        
+//     //     debounceTime(500),
+//     //     map(value => this._filter(value))
+//     //   );
+//       // this.options.map(el=>{this.options.push(el.title);})
 
-  }
+//   }
 
-  private _filter(value: string): string[] {
-    const filterValue = value.toLowerCase();
+//   private _filter(value: string): string[] {
+//     const filterValue = value.toLowerCase();
 
-    return this.options.filter(option => option.toLowerCase().includes(filterValue));
-  }
-}
+//     return this.options.filter(option => option.toLowerCase().includes(filterValue));
+//   }
+// }
