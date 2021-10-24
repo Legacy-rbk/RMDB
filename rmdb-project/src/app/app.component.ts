@@ -119,7 +119,17 @@ export class AppComponent {
 
 
   ngOnInit(): void {
-    if(localStorage.email){this.auth.check(localStorage.email).subscribe(data=>{this.user = data ; this.loggedin = true})}
+    if(localStorage.email){
+      this.auth.check(localStorage.email).subscribe(data=>{this.user = data ; this.loggedin = true})
+      this.moviesget.push(this.movie.getAll().subscribe(data => this.movies = data))
+      this.moviesget.push(this.movie.getAction().subscribe(data => this.action = data))
+      this.moviesget.push(this.movie.getComedy().subscribe(data => this.comedy = data))
+      this.moviesget.push(this.movie.getCrime().subscribe(data => this.crime = data))
+      this.moviesget.push(this.movie.getFamily().subscribe(data => this.family = data))
+      this.moviesget.push(this.movie.getDrama().subscribe(data => this.drama = data))
+
+    }
+    
     this.moviesget.push(this.movie.getAll().subscribe(data => this.movies = data))
     this.moviesget.push(this.movie.getAction().subscribe(data => this.action = data))
     this.moviesget.push(this.movie.getComedy().subscribe(data => this.comedy = data))

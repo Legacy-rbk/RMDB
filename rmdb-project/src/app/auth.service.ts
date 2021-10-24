@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import {User} from './User'
 
+ 
 @Injectable({
   providedIn: 'root'
 })
@@ -21,6 +22,10 @@ signIn(email:string, password:string ){
 
 check(email:string){
   return this.http.get<User>(`http://localhost:3000/user/:${email}`)
+}
+
+addToList(email:string,c:any){
+  return this.http.put<User>(`http://localhost:3000/user/addToWatch/${email}`,c)
 }
 
 }

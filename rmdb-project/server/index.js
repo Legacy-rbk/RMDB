@@ -173,10 +173,18 @@ app.post('/signin', (req, res) => {
 
 
 app.get('/user/:email',(req,res)=>{
-  User.findOne({email:req.params.email}).then((user)=>res.status(200).send(user))
+  User.find({email:req.params.email}).then((user)=>res.status(200).send(user))
   .catch((err)=>res.status(403).send(err))
 })
 
+
+
+app.put('/user/addToWatch/:email' ,(req,res)=>{
+  console.log(req.params , req.body)
+User.findOneAndUpdate({email:req.params.email} , {$push : {toWatchList : req.body}})
+.then(()=>res.status(201).send('saved'))
+.catch((err)=>res.status(401).send(err))
+})
 
 
 
