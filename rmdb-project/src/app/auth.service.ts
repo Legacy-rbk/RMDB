@@ -18,4 +18,11 @@ signUp(email:string, password:string , username:string ) {
 signIn(email:string, password:string ){
   return this.http.post<User>('http://localhost:3000/signin', {email,  password})
 }
+
+check(email:string){
+  return this.http.get<User>(`http://localhost:3000/user/:${email}`)
 }
+
+}
+
+

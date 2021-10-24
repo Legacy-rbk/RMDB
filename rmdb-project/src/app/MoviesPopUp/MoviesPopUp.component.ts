@@ -30,6 +30,7 @@ export class MoviesPopUpComponent implements OnInit {
   addcomment() {
     if(this.data.loggedin){
       this.com.push(this.movie.addComment(this.putUrl,{comment : this.comment , user : this.data.user[0].username}).subscribe(data => console.log(data)))
+      
     }
     else{
       console.log("must login before commenting")
