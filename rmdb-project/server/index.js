@@ -44,7 +44,7 @@ app.post('/api/videos', function (req, res) {
 
 app.put('/api/popular/:videoId', function (req, res) {
   console.log(req.params, req.body)
-  Popular.findByIdAndUpdate({ _id: req.params.videoId }, req.body)
+  Popular.findOneAndUpdate({_id :req.params.videoId } , {$push :{comments : req.body} } )
     .then((result) => {
       res.status(201).send(result);
     })
@@ -52,6 +52,7 @@ app.put('/api/popular/:videoId', function (req, res) {
       res.status(403).send('failed');
     });
 });
+
 app.get('/api/videos/:videoId', function (req, res) {
   Video.findOne({ _id: req.params.videoId })
     .then((result) => {

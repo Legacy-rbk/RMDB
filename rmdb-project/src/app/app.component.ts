@@ -92,7 +92,7 @@ export class AppComponent {
       height: '900px',
       disableClose: false,
       panelClass: 'custom-modalbox',
-      data:{movie : moviepop}
+      data:{movie : moviepop , user : this.user , loggedin :this.loggedin}
       
     });
 
@@ -106,7 +106,7 @@ export class AppComponent {
   
 
   ngOnInit(): void {
-    this.moviesget.push(this.movie.getConfig().subscribe(data => this.movies = data))
+    this.moviesget.push(this.movie.getAll().subscribe(data => this.movies = data))
     this.moviesget.push(this.movie.getAction().subscribe(data => this.action = data))
     this.moviesget.push(this.movie.getComedy().subscribe(data => this.comedy = data))
     this.moviesget.push(this.movie.getCrime().subscribe(data => this.crime = data))
