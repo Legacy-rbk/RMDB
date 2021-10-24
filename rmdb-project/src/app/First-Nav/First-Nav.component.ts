@@ -8,7 +8,7 @@ import { Component, OnInit, HostListener, ElementRef, ViewChild, Input } from '@
 })
 
 export class FirstNavComponent implements OnInit {
-  @Input() navOpen: Function;
+  @Input() logPopUp: Function;
 
   sticky = false;
 

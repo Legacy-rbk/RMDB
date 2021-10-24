@@ -1,5 +1,6 @@
 * {
 	box-sizing: border-box;
+  width:99%
 }
 
 .movie-container {
@@ -13,10 +14,10 @@
   overflow-y : hidden ;
   overflow-x : auto;
   white-space: nowrap;
-  width:1490px;
-  scrollbar-width: none;
-
+  
 }
+
+
 .cont{
   padding: 2rem 2rem; 
 	border-radius: 5px;
@@ -31,7 +32,8 @@
 }
 .image-container {
   -webkit-overflow-scrolling: touch;
-  width:200px;
+
+
 }
 
 img {

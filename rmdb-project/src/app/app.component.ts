@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AuthPopupComponent } from './auth-popup/auth-popup.component';
+import { MoviesPopUpComponent } from './MoviesPopUp/MoviesPopUp.component';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { Movie } from './Movie'
 import { DataService } from './data.service'
@@ -18,13 +19,16 @@ import { User } from './User';
   styleUrls: ['./app.component.scss']
 })
 
-
-
-
 export class AppComponent {
   title = 'rmdb-project';
   moviesget: Subscription[] = [];
   movies: Movie;
+  action:Movie;
+  drama:Movie;
+  family:Movie;
+  comedy:Movie;
+  crime:Movie;
+  moviepop:Movie=null;
   user: User;
   loggedin: boolean = false;
   error: string;
@@ -60,14 +64,20 @@ export class AppComponent {
     else { this.error = 'missing fileds' }
   }
 
+  SignOut = ()=>{
+    this.user=null ;
+    this.loggedin = false
+  }
+
 
   constructor(public dialog: MatDialog, private movie: DataService, private auth: AuthService) { }
-  navOpen():void {
+  logPopUp():void {
     const dialogRef = this.dialog.open(AuthPopupComponent, {
       width: '420px',
       height: '500px',
       disableClose: false,
-      data: { signin: this.SignIn, signup: this.SignUp }
+      data: { signin: this.SignIn, signup: this.SignUp },
+      panelClass:'custom-modalbox1'
     });
 
 
@@ -76,22 +86,32 @@ export class AppComponent {
     });
   }
 
-  // openDialog() {
-  //   const dialogRef = this.dialog.open(AuthPopupComponent, {
-  //     width: '420px',
-  //     height: '500px',
-  //     disableClose: false,
-  //     data:{signin:this.SignIn , signup:this.SignUp}
-  //   });
+  MoviePopUp(moviepop):void{
+    const dialogRef1 = this.dialog.open(MoviesPopUpComponent, {
+      width: '1300px',
+      height: '900px',
+      disableClose: false,
+      panelClass: 'custom-modalbox',
+      data:{movie : moviepop}
+      
+    });
 
 
-  //   dialogRef.afterClosed().subscribe(result => {
-  //     console.log('The dialog was closed')
-  //   });
-  // }
+    dialogRef1.afterClosed().subscribe(result => {
+      console.log('The dialog was closed')
+    });
+
+  }
+
+  
 
   ngOnInit(): void {
     this.moviesget.push(this.movie.getConfig().subscribe(data => this.movies = data))
+    this.moviesget.push(this.movie.getAction().subscribe(data => this.action = data))
+    this.moviesget.push(this.movie.getComedy().subscribe(data => this.comedy = data))
+    this.moviesget.push(this.movie.getCrime().subscribe(data => this.crime = data))
+    this.moviesget.push(this.movie.getFamily().subscribe(data => this.family = data))
+    this.moviesget.push(this.movie.getDrama().subscribe(data => this.drama = data))
 
   }
 
