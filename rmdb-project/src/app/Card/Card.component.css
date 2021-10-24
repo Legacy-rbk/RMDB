@@ -14,12 +14,14 @@
   overflow-y : hidden ;
   overflow-x : auto;
   white-space: nowrap;
-  
 }
 
 .image-container {
   -webkit-overflow-scrolling: touch;
+}
 
+.movie-container::-webkit-scrollbar {
+  display: none;
 }
 
 img {
