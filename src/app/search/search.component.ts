@@ -20,11 +20,11 @@ export class SearchComponent implements OnInit {
   
   
   ngOnInit() {
-    this.filteredOptions = this.myControl.valueChanges
-      .pipe(        
-        debounceTime(500),
-        map(value => this._filter(value))
-      );
+    // this.filteredOptions = this.myControl.valueChanges
+    //   .pipe(        
+    //     debounceTime(500),
+    //     map(value => this._filter(value))
+    //   );
       // this.options.map(el=>{this.options.push(el.title);})
 
   }
