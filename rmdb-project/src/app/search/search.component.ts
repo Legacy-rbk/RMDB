@@ -1,7 +1,8 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit,Input} from '@angular/core';
 import {FormControl} from '@angular/forms';
 import {Observable} from 'rxjs';
-import {map, startWith} from 'rxjs/operators';
+import {map, debounceTime} from 'rxjs/operators';
+import {Movie} from '../Movie'
 
 
 @Component({
@@ -9,17 +10,23 @@ import {map, startWith} from 'rxjs/operators';
   templateUrl: './search.component.html',
   styleUrls: ['./search.component.scss']
 })
-export class SearchComponent implements OnInit {
-  myControl = new FormControl();
-  options: string[] = ['hardcode'];
-  filteredOptions: Observable<string[]>;
 
+export class SearchComponent implements OnInit {
+  @Input() movies:Movie[]
+
+  myControl = new FormControl();
+  options: string[];
+  filteredOptions: Observable<string[]>;
+  
+  
   ngOnInit() {
     this.filteredOptions = this.myControl.valueChanges
-      .pipe(
-        startWith(''),
+      .pipe(        
+        debounceTime(500),
         map(value => this._filter(value))
       );
+      // this.options.map(el=>{this.options.push(el.title);})
+
   }
 
   private _filter(value: string): string[] {
