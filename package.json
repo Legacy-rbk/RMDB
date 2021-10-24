@@ -1,7 +1,9 @@
 {
   "name": "rmdb-project",
   "version": "0.0.0",
-  "node": "14.x",
+  "engines": {
+    "node": "14.x"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
