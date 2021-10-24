@@ -23,6 +23,12 @@ export class AppComponent {
   title = 'rmdb-project';
   moviesget: Subscription[] = [];
   movies: Movie;
+  action:Movie;
+  drama:Movie;
+  family:Movie;
+  comedy:Movie;
+  crime:Movie;
+  moviepop:Movie=null;
   user: User;
   loggedin: boolean = false;
   error: string;
@@ -80,12 +86,13 @@ export class AppComponent {
     });
   }
 
-  MoviePopUp():void{
+  MoviePopUp(moviepop):void{
     const dialogRef1 = this.dialog.open(MoviesPopUpComponent, {
       width: '1300px',
       height: '900px',
       disableClose: false,
-      panelClass: 'custom-modalbox'
+      panelClass: 'custom-modalbox',
+      data:{movie : moviepop}
       
     });
 
@@ -100,6 +107,11 @@ export class AppComponent {
 
   ngOnInit(): void {
     this.moviesget.push(this.movie.getConfig().subscribe(data => this.movies = data))
+    this.moviesget.push(this.movie.getAction().subscribe(data => this.action = data))
+    this.moviesget.push(this.movie.getComedy().subscribe(data => this.comedy = data))
+    this.moviesget.push(this.movie.getCrime().subscribe(data => this.crime = data))
+    this.moviesget.push(this.movie.getFamily().subscribe(data => this.family = data))
+    this.moviesget.push(this.movie.getDrama().subscribe(data => this.drama = data))
 
   }
 

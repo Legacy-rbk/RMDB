@@ -6,7 +6,7 @@
       <div class="d-flex align-items-center">
         
         <div *ngFor="let film of movies" ngbSlide>
-          <img src="{{ film.poster }}" alt="{{ film.title }}" />
+          <img (click)="MoviePopUp(film)" src="{{ film.poster }}" alt="{{ film.title }}" />
         </div>
       </div>
     </div>

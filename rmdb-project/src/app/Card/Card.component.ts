@@ -8,7 +8,7 @@ import {Movie} from '../Movie'
 export class CardComponent implements OnInit {
 
   
-
+@Input() MoviePopUp: Function;
 @Input() movies:Movie[]
   constructor() { }
 
