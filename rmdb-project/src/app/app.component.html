@@ -5,11 +5,11 @@
   <app-Second-Nav [SignOut]="SignOut.bind(this)"></app-Second-Nav>
 </div>
 
-<app-Slider-Show [loggedin]="loggedin" ></app-Slider-Show>
+<app-Slider-Show  [loggedin]="loggedin" ></app-Slider-Show>
 
-<app-Card [movies]='movies'></app-Card>
+<app-Card [MoviePopUp]="MoviePopUp.bind(this)" [movies]='movies'></app-Card>
 
-<button (click)="MoviePopUp()">movie</button>
+<!-- <button (click)="MoviePopUp()">movie</button> -->
 <div *ngIf="error">{{error}}</div>
 
 <router-outlet></router-outlet>
