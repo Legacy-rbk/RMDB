@@ -87,7 +87,7 @@ export class AppComponent {
   logPopUp(): void {
     const dialogRef = this.dialog.open(AuthPopupComponent, {
       width: '420px',
-      height: '500px',
+      height: '590px',
       disableClose: false,
       data: { signin: this.SignIn, signup: this.SignUp },
       panelClass: 'custom-modalbox1'
@@ -120,15 +120,7 @@ export class AppComponent {
 
   ngOnInit(): void {
     if(localStorage.email){
-      this.auth.check(localStorage.email).subscribe(data=>{this.user = data ; this.loggedin = true})
-      this.moviesget.push(this.movie.getAll().subscribe(data => this.movies = data))
-      this.moviesget.push(this.movie.getAction().subscribe(data => this.action = data))
-      this.moviesget.push(this.movie.getComedy().subscribe(data => this.comedy = data))
-      this.moviesget.push(this.movie.getCrime().subscribe(data => this.crime = data))
-      this.moviesget.push(this.movie.getFamily().subscribe(data => this.family = data))
-      this.moviesget.push(this.movie.getDrama().subscribe(data => this.drama = data))
-
-    }
+      this.auth.check(localStorage.email).subscribe(data=>{this.user = data ; this.loggedin = true})}
     
     this.moviesget.push(this.movie.getAll().subscribe(data => this.movies = data))
     this.moviesget.push(this.movie.getAction().subscribe(data => this.action = data))

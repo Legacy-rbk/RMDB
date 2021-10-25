@@ -34,16 +34,16 @@
         <li>
           <div ngbDropdown>
             <a ngbDropdownToggle> Categories </a>
-            <div class="opacity" ngbDropdownMenu>
-              <button ngbDropdownItem>Action</button>
-              <button ngbDropdownItem>Drama</button>
-              <button ngbDropdownItem>Comedy</button>
-              <button ngbDropdownItem>Family</button>
-              <button ngbDropdownItem>Crime</button>
+            <div routerLink='/' class="opacity" ngbDropdownMenu>
+              <button (click)="toAction()" routerLinkActive='Active' ngbDropdownItem>Action</button>
+              <button (click)="toDrama()" routerLinkActive='Active' ngbDropdownItem>Drama</button>
+              <button (click)="toComedy()" routerLinkActive='Active' ngbDropdownItem>Comedy</button>
+              <button (click)="toFamily()" routerLinkActive='Active' ngbDropdownItem>Family</button>
+              <button (click)="toCrime()" routerLinkActive='Active' ngbDropdownItem>Crime</button>
             </div>
           </div>
         </li>
-        <li><a href="#">Watchlist</a></li>
+        <li><a (click)="toWatch()" routerLinkActive='Active' >Watchlist</a></li>
 
         <li>
           <mat-icon class="cursor" (click)="SignOut()">logout</mat-icon>
