@@ -8,7 +8,7 @@ import {User} from './User'
 })
 export class AuthService {
 
-  root='https://rmdb-6xnl1hv4r-rmdb.vercel.app/'
+  root='https://rmdb-three.vercel.app/'
 
 constructor(private http: HttpClient) { }
 
