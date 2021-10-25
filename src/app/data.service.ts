@@ -10,13 +10,15 @@ import { Movie } from './Movie'
 
 export class DataService {
 
-  allmovies = 'http://localhost:3000/api/pop';
+  root='https://rmdb-6xnl1hv4r-rmdb.vercel.app/'
+
+  allmovies = `${this.root}/api/pop`;
   getAll() {
     return this.http.get<Movie>(this.allmovies);
   }
 
 
-  sliders = 'http://localhost:3000/api/slider';
+  sliders = `${this.root}api/slider`;
   getSliders() {
     return this.http.get<Movie>(this.sliders)
   }
@@ -24,23 +26,23 @@ export class DataService {
 
 
 
-  Action = 'http://localhost:3000/api/Action';
+  Action = `${this.root}api/Action`;
   getAction() {
     return this.http.get<Movie>(this.Action);
   }
-  Comedy = 'http://localhost:3000/api/Comedy';
+  Comedy = `${this.root}api/Comedy`;
   getComedy() {
     return this.http.get<Movie>(this.Comedy);
   }
-  Drama = 'http://localhost:3000/api/Drama';
+  Drama = `${this.root}api/Drama`;
   getDrama() {
     return this.http.get<Movie>(this.Drama);
   }
-  Family = 'http://localhost:3000/api/Family';
+  Family = `${this.root}api/Family`;
   getFamily() {
     return this.http.get<Movie>(this.Family);
   }
-  Crime = 'http://localhost:3000/api/Crime';
+  Crime = `${this.root}api/Crime`;
   getCrime() {
     return this.http.get<Movie>(this.Crime);
   }
