@@ -32,7 +32,7 @@ const slides = [
     language: ["Bahasa indonesia"],
   },
   {
-    title: "Once upon a time",
+    title: "Once upon a time in Holywood",
     year: "2019",
     release_date: "2019-05-21",
     description:"it is the first Tarantino film not to involve Bob and Harvey Weinstein, as Tarantino ended his partnership with the brothers following the sexual abuse allegations against the latter.",

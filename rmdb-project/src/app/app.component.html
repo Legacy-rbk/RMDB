@@ -2,7 +2,7 @@
   <app-First-Nav [logPopUp]="logPopUp.bind(this)"></app-First-Nav>
 </div>
 <div *ngIf="loggedin === true">
-  <app-Second-Nav [SignOut]="SignOut.bind(this)"></app-Second-Nav>
+  <app-Second-Nav  [movies]="movies" [SignOut]="SignOut.bind(this)"></app-Second-Nav>
 </div>
 
 <app-Slider-Show [loggedin]="loggedin"></app-Slider-Show>
