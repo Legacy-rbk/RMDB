@@ -26,7 +26,7 @@ export class MoviesPopUpComponent implements OnInit {
   url: string = `https://www.youtube.com/embed/${this.data.movie.youtube_trailer_key}`
   urlSafe: SafeResourceUrl;
   comment: string
-  root='https://rmdb-three.vercel.app/'
+  root='https://localhost:3000/'
 
   putUrl:string = `${this.root}api/popular/${this.data.movie._id}`
 

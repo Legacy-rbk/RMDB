@@ -10,9 +10,9 @@ import { Movie } from './Movie'
 
 export class DataService {
 
-  root='https://rmdb-three.vercel.app/'
+  root='https://localhost:3000/'
 
-  allmovies = `${this.root}/api/pop`;
+  allmovies = `${this.root}api/pop`;
   getAll() {
     return this.http.get<Movie>(this.allmovies);
   }
