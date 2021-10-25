@@ -10,15 +10,13 @@ import { Movie } from './Movie'
 
 export class DataService {
 
-  root='https://localhost:3000/'
-
-  allmovies = `${this.root}api/pop`;
+  allmovies = 'http://localhost:3000/api/pop';
   getAll() {
     return this.http.get<Movie>(this.allmovies);
   }
 
 
-  sliders = `${this.root}api/slider`;
+  sliders = 'http://localhost:3000/api/slider';
   getSliders() {
     return this.http.get<Movie>(this.sliders)
   }
@@ -26,23 +24,23 @@ export class DataService {
 
 
 
-  Action = `${this.root}api/Action`;
+  Action = 'http://localhost:3000/api/Action';
   getAction() {
     return this.http.get<Movie>(this.Action);
   }
-  Comedy = `${this.root}api/Comedy`;
+  Comedy = 'http://localhost:3000/api/Comedy';
   getComedy() {
     return this.http.get<Movie>(this.Comedy);
   }
-  Drama = `${this.root}api/Drama`;
+  Drama = 'http://localhost:3000/api/Drama';
   getDrama() {
     return this.http.get<Movie>(this.Drama);
   }
-  Family = `${this.root}api/Family`;
+  Family = 'http://localhost:3000/api/Family';
   getFamily() {
     return this.http.get<Movie>(this.Family);
   }
-  Crime = `${this.root}api/Crime`;
+  Crime = 'http://localhost:3000/api/Crime';
   getCrime() {
     return this.http.get<Movie>(this.Crime);
   }
